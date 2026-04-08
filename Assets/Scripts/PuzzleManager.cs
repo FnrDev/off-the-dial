@@ -37,7 +37,7 @@ public class PuzzleManager : MonoBehaviour
 
                 if (inputText != null)
                 {
-                    inputText.text = "Code: " + collectedCode + " ✅";
+                    inputText.text = "Access Granted ✔ Door Unlocked";
                 }
 
                 if (door != null)
@@ -51,7 +51,7 @@ public class PuzzleManager : MonoBehaviour
 
                 if (inputText != null)
                 {
-                    inputText.text = "Wrong Code!";
+                    inputText.text = "Access Denied ❌";
                 }
 
                 collectedCode = "";

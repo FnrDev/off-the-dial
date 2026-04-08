@@ -11,6 +11,7 @@ public class ClueInteract : MonoBehaviour
     public string clueText;
     public string clueDigit;
     public TextMeshProUGUI clueUI;
+    public TextMeshProUGUI promptText;
 
     private bool playerInRange = false;
 
@@ -38,16 +39,26 @@ public class ClueInteract : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
+    {
+        playerInRange = true;
+
+        if (promptText != null)
         {
-            playerInRange = true;
+            promptText.text = "Press E to Inspect";
         }
+    }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+           if (other.CompareTag("Player"))
+    {
+        playerInRange = false;
+
+        if (promptText != null)
         {
-            playerInRange = false;
+            promptText.text = "";
         }
+    }
     }
 }
