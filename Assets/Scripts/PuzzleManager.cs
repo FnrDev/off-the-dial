@@ -6,7 +6,7 @@ public class PuzzleManager : MonoBehaviour
     public static PuzzleManager Instance;
 
     public string collectedCode = "";
-    public string correctCode = "417";
+    public string correctCode = "714";
     public TextMeshProUGUI inputText;
     public GameObject door;
 
@@ -32,12 +32,11 @@ public class PuzzleManager : MonoBehaviour
         {
             if (collectedCode == correctCode)
             {
-                Debug.Log("✅ CORRECT CODE - Puzzle Solved!");
                 puzzleSolved = true;
 
                 if (inputText != null)
                 {
-                    inputText.text = "Code: " + collectedCode + " ✅";
+                    inputText.text = "Access Granted - Door Unlocked";
                 }
 
                 if (door != null)
@@ -47,25 +46,25 @@ public class PuzzleManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("❌ WRONG CODE - Resetting...");
-
                 if (inputText != null)
                 {
-                    inputText.text = "Wrong Code!";
+                    inputText.text = "Access Denied";
                 }
 
                 collectedCode = "";
-                Invoke(nameof(ResetInputText), 1.5f);
+                Invoke(nameof(ResetInputText), 1.2f);
             }
         }
     }
-void ResetInputText()
-{
-    if (inputText != null && !puzzleSolved)
+
+    void ResetInputText()
     {
-        inputText.text = "Code:";
+        if (!puzzleSolved && inputText != null)
+        {
+            inputText.text = "Code:";
+        }
     }
-}
+
     public void UpdateInputDisplay(string currentInput)
     {
         if (inputText != null)
