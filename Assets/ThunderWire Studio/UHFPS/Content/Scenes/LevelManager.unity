@@ -127,6 +127,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 739956880366519295, guid: a6d90327880ef514da0c37e51d684ce0, type: 3}
+      propertyPath: RandomBackgrounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 739956880366519295, guid: a6d90327880ef514da0c37e51d684ce0, type: 3}
+      propertyPath: 'RandomBackgrounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 018e29cdc921daa439a4164c85a726e1, type: 3}
+    - target: {fileID: 739956880366519295, guid: a6d90327880ef514da0c37e51d684ce0, type: 3}
+      propertyPath: 'RandomBackgrounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: fa183d09201c0424da613918d9406b14, type: 3}
+    - target: {fileID: 739956880366519295, guid: a6d90327880ef514da0c37e51d684ce0, type: 3}
+      propertyPath: 'RandomBackgrounds.Array.data[2]'
+      value: 
+      objectReference: {fileID: 21300000, guid: b7704861b268cf145b1b5ee8669786e7, type: 3}
+    - target: {fileID: 739956880366519295, guid: a6d90327880ef514da0c37e51d684ce0, type: 3}
+      propertyPath: 'RandomBackgrounds.Array.data[3]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 0d4c3066d149d784a850235b89159bcb, type: 3}
     - target: {fileID: 1397992443369760298, guid: a6d90327880ef514da0c37e51d684ce0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
