@@ -24,6 +24,7 @@ namespace UHFPS.Runtime
         }
 
         public LevelInfo[] LevelInfos;
+        public Sprite[] RandomBackgrounds;
 
         public TMText Title;
         public TMText Description;
@@ -70,6 +71,11 @@ namespace UHFPS.Runtime
                     }
                 }
 
+                if (RandomBackgrounds != null && RandomBackgrounds.Length > 0)
+                {
+                    Background.sprite = RandomBackgrounds[UnityEngine.Random.Range(0, RandomBackgrounds.Length)];
+                }
+
                 StartCoroutine(LoadLevelAsync(sceneName));
             }
         }
@@ -103,7 +109,12 @@ namespace UHFPS.Runtime
                     yield return CanvasGroupFader.StartFade(NewPanel, true, SwitchFadeSpeed);
                 }
 
-                yield return new WaitUntil(() => InputManager.AnyKeyPressed());
+                float waitTime = 0f;
+                while (waitTime < 4f && !InputManager.AnyKeyPressed())
+                {
+                    waitTime += Time.unscaledDeltaTime;
+                    yield return null;
+                }
 
                 if (FadeBackground)
                 {

@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 00000000000000000000000000000000
+  productGUID: 61df0cbfa3fe3ac4585c8cc4e63a04e2
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -803,7 +803,7 @@ PlayerSettings:
   cloudProjectId: 116406e7-19cc-487f-b119-3dfb7e164b01
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
+  projectName: off-the-dial
   organizationId: fnrdev10
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
