@@ -12,6 +12,14 @@ public class PlayerMovement : MonoBehaviour
     [Header("Noise (Creature AI will read this later)")]
     public float currentNoiseLevel = 0f;
 
+    [Header("Footsteps")]
+    public AudioSource footstepSource;
+    public AudioClip walkClip;
+    public AudioClip sprintClip;
+    public float walkPitch = 1.0f;
+    public float sprintPitch = 1.35f;
+    public float crouchPitch = 0.8f;
+
     private CharacterController controller;
     private Camera playerCamera;
     private float verticalRotation = 0f;
@@ -21,6 +29,13 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         playerCamera = GetComponentInChildren<Camera>();
+        if (footstepSource == null) footstepSource = GetComponent<AudioSource>();
+        if (footstepSource != null)
+        {
+            footstepSource.loop = true;
+            footstepSource.playOnAwake = false;
+            if (footstepSource.clip == null && walkClip != null) footstepSource.clip = walkClip;
+        }
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -69,8 +84,10 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * speed * Time.deltaTime);
         controller.Move(Vector3.down * 9.8f * Time.deltaTime);
 
-        // Noise level
-        if (move.magnitude > 0.1f)
+        bool moving = move.sqrMagnitude > 0.01f;
+        UpdateFootsteps(moving, sprinting);
+
+        if (moving)
         {
             if (isCrouching)    currentNoiseLevel = 0.1f;
             else if (sprinting) currentNoiseLevel = 1.0f;
@@ -79,6 +96,26 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             currentNoiseLevel = 0f;
+        }
+    }
+
+    void UpdateFootsteps(bool moving, bool sprinting)
+    {
+        if (footstepSource == null) return;
+        if (moving)
+        {
+            var desired = (sprinting && sprintClip != null) ? sprintClip : walkClip;
+            if (desired != null && footstepSource.clip != desired)
+            {
+                footstepSource.clip = desired;
+                footstepSource.Play();
+            }
+            footstepSource.pitch = isCrouching ? crouchPitch : (sprinting ? sprintPitch : walkPitch);
+            if (!footstepSource.isPlaying) footstepSource.Play();
+        }
+        else if (footstepSource.isPlaying)
+        {
+            footstepSource.Pause();
         }
     }
 
