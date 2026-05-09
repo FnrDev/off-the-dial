@@ -59855,8 +59855,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e6e9ef9c4ea4186a95f2a5360ede71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClueInteract
-  clueText: 
-  clueDigit: 
+  clueText: 'A worn textbook left open. Page four is torn at the corner. Someone
+    wrote in the margin: "They know. Don''t let them find this."'
+  clueDigit: 4
   clueUI: {fileID: 0}
   promptText: {fileID: 0}
 --- !u!1001 &576229379
@@ -103450,8 +103451,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e6e9ef9c4ea4186a95f2a5360ede71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClueInteract
-  clueText: 
-  clueDigit: 
+  clueText: "Seven days before the disappearances, all classes were cancelled. The
+    date is circled in red \u2014 the 7th."
+  clueDigit: 7
   clueUI: {fileID: 0}
   promptText: {fileID: 0}
 --- !u!1001 &969062556
@@ -128061,6 +128063,7 @@ GameObject:
   - component: {fileID: 1172880410}
   - component: {fileID: 1172880409}
   - component: {fileID: 1172880408}
+  - component: {fileID: 1172880411}
   m_Layer: 0
   m_Name: SchoolLight
   m_TagString: Untagged
@@ -128177,6 +128180,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1172880411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172880407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42bde4ea440f4410bb0696b213ba9bd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlickerLight
+  targetLight: {fileID: 1172880409}
+  minIntensity: 0
+  maxIntensity: 2
+  flickerSpeed: 0.05
 --- !u!1 &1172919932 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1719411279065754, guid: ffe16f9903d0b604aab93d16dfb3281d, type: 3}
@@ -206736,8 +206755,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e6e9ef9c4ea4186a95f2a5360ede71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClueInteract
-  clueText: 
-  clueDigit: 
+  clueText: An attendance register. Every name crossed out except one. One student
+    marked present on the final day.
+  clueDigit: 1
   clueUI: {fileID: 0}
   promptText: {fileID: 0}
 --- !u!1001 &1824728385
