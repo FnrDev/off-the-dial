@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: f7786bbb6549ff5468ebda881ebd510b, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 2ea606c34070c934e8b7eb14439a0e30, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 091f8acad9b4d1b438dfb85d2ff94946, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -4251,6 +4251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5a7eaf66bc314f91886686c34003463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleManager
+  resultText: {fileID: 0}
   collectedCode: 
   correctCode: 714
   inputText: {fileID: 0}
@@ -59972,6 +59973,8 @@ MonoBehaviour:
   clueDigit: 4
   clueUI: {fileID: 0}
   promptText: {fileID: 0}
+  player: {fileID: 0}
+  interactDistance: 3
 --- !u!1001 &576229379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103568,6 +103571,8 @@ MonoBehaviour:
   clueDigit: 7
   clueUI: {fileID: 0}
   promptText: {fileID: 0}
+  player: {fileID: 0}
+  interactDistance: 3
 --- !u!1001 &969062556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -206872,6 +206877,8 @@ MonoBehaviour:
   clueDigit: 1
   clueUI: {fileID: 0}
   promptText: {fileID: 0}
+  player: {fileID: 0}
+  interactDistance: 3
 --- !u!1001 &1824728385
 PrefabInstance:
   m_ObjectHideFlags: 0
