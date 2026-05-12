@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: abc00000000007320058291081864075
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325627
+  packageName: Americana Island Built-In
+  packageVersion: 1.2
+  assetPath: Assets/Americana_Island/Materials/M_Concrete.mat
+  uploadId: 800256

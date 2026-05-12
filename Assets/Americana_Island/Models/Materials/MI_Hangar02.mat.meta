@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ecd4ff56565dce7488a4dc21d77fb796
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325627
+  packageName: Americana Island Built-In
+  packageVersion: 1.2
+  assetPath: Assets/Americana_Island/Models/Materials/MI_Hangar02.mat
+  uploadId: 800256
