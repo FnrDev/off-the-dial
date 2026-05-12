@@ -8,10 +8,22 @@ public class ClueInteract : MonoBehaviour
     public TextMeshProUGUI clueUI;
     public TextMeshProUGUI promptText;
 
+    public Transform player;
+    public float interactDistance = 3f;
+
     private bool playerInRange = false;
 
     void Update()
     {
+        if (player == null) return;
+
+        playerInRange = Vector3.Distance(transform.position, player.position) <= interactDistance;
+
+        if (playerInRange)
+            promptText.text = "Press E to Inspect";
+        else
+            promptText.text = "";
+
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             ShowClue();
@@ -20,66 +32,28 @@ public class ClueInteract : MonoBehaviour
 
     void ShowClue()
     {
-        if (promptText != null)
-        {
-            promptText.text = "";
-        }
-
-        if (clueUI != null)
-        {
-            clueUI.text = clueText;
-
-            CancelInvoke(nameof(ClearClueText));
-            Invoke(nameof(ClearClueText), 2f);
-        }
+        HeartMonitorBeep beep = GetComponent<HeartMonitorBeep>();
+if (beep != null)
+{
+    beep.PlayPattern();
+}
+        promptText.text = "";
+        clueUI.text = clueText;
 
         if (PuzzleManager.Instance != null)
         {
             PuzzleManager.Instance.AddDigit(clueDigit);
         }
+
+        CancelInvoke(nameof(ClearClueText));
+        Invoke(nameof(ClearClueText), 2f);
     }
 
     void ClearClueText()
     {
-        if (clueUI != null)
-        {
-            clueUI.text = "";
-        }
+        clueUI.text = "";
 
-        if (playerInRange && promptText != null)
-        {
+        if (playerInRange)
             promptText.text = "Press E to Inspect";
-        }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = true;
-
-            if (promptText != null)
-            {
-                promptText.text = "Press E to Inspect";
-            }
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = false;
-
-            if (promptText != null)
-            {
-                promptText.text = "";
-            }
-
-            if (clueUI != null)
-            {
-                clueUI.text = "";
-            }
-        }
     }
 }
