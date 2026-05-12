@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 019bf68409a45bc4491db459f550053e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 112000000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325627
+  packageName: Americana Island Built-In
+  packageVersion: 1.2
+  assetPath: Assets/Americana_Island/Scenes/Island_V2_cleaned2/LightingData.asset
+  uploadId: 800256

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 004692e859d9c884fa19ebbff5d36aca
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325627
+  packageName: Americana Island Built-In
+  packageVersion: 1.2
+  assetPath: Assets/Americana_Island/Materials/M_AsphaltDamage.mat
+  uploadId: 800256

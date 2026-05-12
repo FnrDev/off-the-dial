@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 401c0c68db8eca04dbb89923893a4622
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325627
+  packageName: Americana Island Built-In
+  packageVersion: 1.2
+  assetPath: Assets/Americana_Island/Models/Materials/MI_RadioElectronics.mat
+  uploadId: 800256
