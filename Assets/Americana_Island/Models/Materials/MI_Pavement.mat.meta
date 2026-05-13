@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: aea7ae95023fe03429946ec6151bef8a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325627
+  packageName: Americana Island Built-In
+  packageVersion: 1.2
+  assetPath: Assets/Americana_Island/Models/Materials/MI_Pavement.mat
+  uploadId: 800256

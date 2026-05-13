@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0eaaa84591df92d479165208e7f2f10d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325627
+  packageName: Americana Island Built-In
+  packageVersion: 1.2
+  assetPath: Assets/Americana_Island/Settings/PostVolume Profile.asset
+  uploadId: 800256

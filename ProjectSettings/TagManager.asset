@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 3
   tags:
   - Flesh
-  - Clue
   layers:
   - Default
   - TransparentFX

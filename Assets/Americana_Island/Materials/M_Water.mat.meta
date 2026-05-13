@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cd5fb03876bf31440b354f74a768a419
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 325627
+  packageName: Americana Island Built-In
+  packageVersion: 1.2
+  assetPath: Assets/Americana_Island/Materials/M_Water.mat
+  uploadId: 800256
