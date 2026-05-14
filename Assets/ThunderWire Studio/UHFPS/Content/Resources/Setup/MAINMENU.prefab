@@ -8840,7 +8840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BackgroundFader: {fileID: 6232774375700191767}
-  NewGameSceneName: Playground
+  NewGameSceneName: Island_V2_cleaned2
   NewGameRemoveSaves: 1
 --- !u!114 &7217707455595302133
 MonoBehaviour:
