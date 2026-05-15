@@ -27,6 +27,7 @@ MonoBehaviour:
   m_RendererFeatures:
   - {fileID: 7833122117494664109}
   - {fileID: 5558062022767368305}
+  - {fileID: 1117414324336616864}
   m_RendererFeatureMap: ad6b866f10d7b46c
   m_UseNativeRenderPass: 1
   xrSystemData: {fileID: 0}
@@ -56,6 +57,58 @@ MonoBehaviour:
   m_DepthTextureFormat: 0
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 0
+--- !u!114 &1117414324336616864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8edbb954c353ff48ab458cd1f7f15df, type: 3}
+  m_Name: UHFPS Screen Effects
+  m_EditorClassIdentifier: Assembly-CSharp::UHFPS.Rendering.UHFPSScreenEffects
+  m_Active: 1
+  Features:
+  - rid: 3312193377330004037
+  - rid: 3312193377330004038
+  - rid: 3312193377330004039
+  - rid: 3312193377330004040
+  - rid: 3312193377330004041
+  references:
+    version: 2
+    RefIds:
+    - rid: 3312193377330004037
+      type: {class: ScanlinesFeature, ns: UHFPS.Rendering, asm: Assembly-CSharp}
+      data:
+        Enabled: 0
+        RenderPassEvent: 500
+        EffectMaterial: {fileID: 0}
+    - rid: 3312193377330004038
+      type: {class: BloodDisortionFeature, ns: UHFPS.Rendering, asm: Assembly-CSharp}
+      data:
+        Enabled: 1
+        RenderPassEvent: 500
+        EffectMaterial: {fileID: 2100000, guid: 4e2e19bbe4888424f83d80efd0ca9238, type: 2}
+    - rid: 3312193377330004039
+      type: {class: EyeBlinkFeature, ns: UHFPS.Rendering, asm: Assembly-CSharp}
+      data:
+        Enabled: 0
+        RenderPassEvent: 500
+        EffectMaterial: {fileID: 0}
+    - rid: 3312193377330004040
+      type: {class: FearTentanclesFeature, ns: UHFPS.Rendering, asm: Assembly-CSharp}
+      data:
+        Enabled: 0
+        RenderPassEvent: 500
+        EffectMaterial: {fileID: 0}
+    - rid: 3312193377330004041
+      type: {class: RaindropFeature, ns: UHFPS.Rendering, asm: Assembly-CSharp}
+      data:
+        Enabled: 0
+        RenderPassEvent: 500
+        EffectMaterial: {fileID: 0}
 --- !u!114 &5558062022767368305
 MonoBehaviour:
   m_ObjectHideFlags: 0
