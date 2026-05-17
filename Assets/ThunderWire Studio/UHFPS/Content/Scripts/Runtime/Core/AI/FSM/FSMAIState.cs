@@ -213,7 +213,6 @@ namespace UHFPS.Runtime
 
                     if(waypointDistance < distance)
                     {
-                        distance = waypointDistance;
                         closestGroup = group;
                         closestWaypoint = waypoint;
                     }
