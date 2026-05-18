@@ -341,6 +341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1714860474}
   - component: {fileID: 1714860475}
+  - component: {fileID: 1714860476}
   m_Layer: 0
   m_Name: MenuMusic
   m_TagString: Untagged
@@ -363,6 +364,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7902366314218218365}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1714860476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714860473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c506f8e2c894f4aa4c8c60958e9231, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  OptionObservers:
+  - rid: 7714860476000000001
+  references:
+    version: 2
+    RefIds:
+    - rid: 7714860476000000001
+      type: {class: OptionAudioVolume, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        ObserveOptionName: volume_music
+        AudioSource: {fileID: 1714860475}
 --- !u!82 &1714860475
 AudioSource:
   m_ObjectHideFlags: 0

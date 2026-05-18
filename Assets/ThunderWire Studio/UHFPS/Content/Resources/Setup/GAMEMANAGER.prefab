@@ -19785,6 +19785,105 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &3985281936010688071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1710770156088866770}
+  - component: {fileID: 4032831005335332915}
+  m_Layer: 0
+  m_Name: TaskListUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1710770156088866770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3985281936010688071}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5978836908739096463}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4032831005335332915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3985281936010688071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64f25079c24c8d43843b1367e358f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TaskListUI
+  Tasks:
+  - Id: fix_wiring
+    Category: Electrical
+    TaskName: Fix Wiring
+    RequiredCount: 3
+    CurrentCount: 0
+    Completed: 0
+  - Id: swipe_card
+    Category: Admin
+    TaskName: Swipe Card
+    RequiredCount: 1
+    CurrentCount: 0
+    Completed: 0
+  - Id: start_reactor
+    Category: Reactor
+    TaskName: Start Reactor
+    RequiredCount: 1
+    CurrentCount: 0
+    Completed: 0
+  - Id: clear_asteroids
+    Category: Weapons
+    TaskName: Clear Asteroids
+    RequiredCount: 20
+    CurrentCount: 0
+    Completed: 0
+  - Id: fuel_engines
+    Category: Storage
+    TaskName: Fuel Engines
+    RequiredCount: 2
+    CurrentCount: 0
+    Completed: 0
+  - Id: clean_o2_filter
+    Category: O2
+    TaskName: Clean O2 Filter
+    RequiredCount: 1
+    CurrentCount: 0
+    Completed: 0
+  - Id: stabilize_steer
+    Category: Navigation
+    TaskName: Stabilize Steering
+    RequiredCount: 1
+    CurrentCount: 0
+    Completed: 0
+  PanelPlacement: 2
+  PanelWidth: 360
+  GapBelowFps: 8
+  FallbackCornerMargin: {x: 12, y: 12}
+  FontSize: 16
+  HeaderFontSize: 16
+  HeaderText: TOTAL TASKS COMPLETED
+  IncompleteColor: {r: 1, g: 1, b: 1, a: 1}
+  CompleteColor: {r: 0.3, g: 0.85, b: 0.3, a: 1}
+  BarBackColor: {r: 0, g: 0, b: 0, a: 0.55}
+  BarFillColor: {r: 0.3, g: 0.85, b: 0.3, a: 1}
+  ShowProgressBar: 0
 --- !u!1 &4003154659877326839
 GameObject:
   m_ObjectHideFlags: 0
@@ -20607,6 +20706,7 @@ RectTransform:
   - {fileID: 6339261843131179269}
   - {fileID: 8256242872236656144}
   - {fileID: 8324240504449546602}
+  - {fileID: 1710770156088866770}
   m_Father: {fileID: 6767216763119794028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
