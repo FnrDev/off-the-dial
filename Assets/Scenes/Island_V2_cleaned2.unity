@@ -30024,69 +30024,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9110905778278419111, guid: 7947549134e32e3469278f301488dfce, type: 3}
   m_PrefabInstance: {fileID: 289394469}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &290911511
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1031221382, guid: abc00000000017625011071520638456, type: 3}
-      propertyPath: m_Name
-      value: Books
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031221383, guid: abc00000000017625011071520638456, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 78.1912
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031221383, guid: abc00000000017625011071520638456, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -62.25597
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031221383, guid: abc00000000017625011071520638456, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -225.18607
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031221383, guid: abc00000000017625011071520638456, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031221383, guid: abc00000000017625011071520638456, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031221383, guid: abc00000000017625011071520638456, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031221383, guid: abc00000000017625011071520638456, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031221383, guid: abc00000000017625011071520638456, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031221383, guid: abc00000000017625011071520638456, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031221383, guid: abc00000000017625011071520638456, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1031221382, guid: abc00000000017625011071520638456, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 788125537}
-    - targetCorrespondingSourceObject: {fileID: 1031221382, guid: abc00000000017625011071520638456, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 788125536}
-  m_SourcePrefab: {fileID: 100100000, guid: abc00000000017625011071520638456, type: 3}
 --- !u!1 &291177314
 GameObject:
   m_ObjectHideFlags: 0
@@ -52945,11 +52882,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2493115079062098535, guid: 0d2474556dbb9714683a45e63c6a1ae6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2493115079062098535, guid: 0d2474556dbb9714683a45e63c6a1ae6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2493115079062098535, guid: 0d2474556dbb9714683a45e63c6a1ae6, type: 3}
       propertyPath: m_LocalRotation.y
@@ -52961,7 +52898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2493115079062098535, guid: 0d2474556dbb9714683a45e63c6a1ae6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2493115079062098535, guid: 0d2474556dbb9714683a45e63c6a1ae6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -66723,191 +66660,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &788125535 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1031221382, guid: abc00000000017625011071520638456, type: 3}
-  m_PrefabInstance: {fileID: 290911511}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &788125536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 788125535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae5410da070dae640b0ca6b2b50c9a65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UHFPS.Runtime.ExamineController
-  FocusCullLayes:
-    serializedVersion: 2
-    m_Bits: 0
-  FocusLayer:
-    index: 0
-  FocusRenderingLayer: 0
-  ExamineLight: {fileID: 0}
-  HotspotPrefab: {fileID: 0}
-  ControlPutBack:
-    InputAction:
-      ActionName: 
-      BindingIndex: 0
-    InteractName:
-      GlocText: 
-      NormalText: 
-  ControlRead:
-    InputAction:
-      ActionName: 
-      BindingIndex: 0
-    InteractName:
-      GlocText: 
-      NormalText: 
-  ControlTake:
-    InputAction:
-      ActionName: 
-      BindingIndex: 0
-    InteractName:
-      GlocText: 
-      NormalText: 
-  ControlRotate:
-    InputAction:
-      ActionName: 
-      BindingIndex: 0
-    InteractName:
-      GlocText: 
-      NormalText: 
-  ControlZoom:
-    InputAction:
-      ActionName: 
-      BindingIndex: 0
-    InteractName:
-      GlocText: 
-      NormalText: 
-  RotateTime: 0.1
-  RotateMultiplier: 3
-  ZoomMultiplier: 0.1
-  TimeToExamine: 2
-  DropOffset: {x: 0, y: 0, z: 0}
-  InventoryOffset: {x: 0, y: 0, z: 0}
-  ShowLabels: 1
-  PickUpCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  PickUpCurveMultiplier: 1
-  PickUpTime: 0.2
-  PutPositionCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  PutPositionCurveMultiplier: 1
-  PutPositionCurveTime: 0.1
-  PutRotationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  PutRotationCurveMultiplier: 1
-  PutRotationCurveTime: 0.1
-  ExamineHintSound:
-    audioClip: {fileID: 0}
-    volume: 0
---- !u!114 &788125537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 788125535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3745de7da048ba84c99d02af31dbbaed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UHFPS.Runtime.InteractController
-  RaycastRange: 3
-  HoldDistance: 4
-  CullLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  InteractLayer:
-    index: 0
-  ShowLootedText: 0
-  ShowDefaultPickupIcon: 0
-  DefaultPickupIcon: {fileID: 0}
-  UseAction:
-    ActionName: 
-    BindingIndex: 0
-  ExamineAction:
-    ActionName: 
-    BindingIndex: 0
-  InteractText:
-    GlocText: Examine
-    NormalText: 
-  ExamineText:
-    GlocText: Logbook
-    NormalText: 
-  LootText:
-    GlocText: 
-    NormalText: 
 --- !u!1 &789108952
 GameObject:
   m_ObjectHideFlags: 0
@@ -468268,6 +468020,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750198371}
   m_CullTransparentMesh: 1
+--- !u!1001 &1750837974
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 77.008
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -62.201
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -225.07346
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942978116332352015, guid: 627ae67cafd26d148a3f288603948900, type: 3}
+      propertyPath: m_Name
+      value: Paper_D
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766501599251685943, guid: 627ae67cafd26d148a3f288603948900, type: 3}
+      propertyPath: PaperText.GlocText
+      value: Won't move without payment. Says the lockbox in the back of the trailer
+        is his. Key is by the door. Take what's in that box before they do.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766501599251685943, guid: 627ae67cafd26d148a3f288603948900, type: 3}
+      propertyPath: InteractTitle.GlocText
+      value: objects.logbook
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 627ae67cafd26d148a3f288603948900, type: 3}
 --- !u!1 &1751471944
 GameObject:
   m_ObjectHideFlags: 0
@@ -503201,7 +503019,7 @@ SceneRoots:
   - {fileID: 854700580}
   - {fileID: 266196257}
   - {fileID: 1700331798}
-  - {fileID: 290911511}
   - {fileID: 619310782}
   - {fileID: 230604418}
   - {fileID: 1672632387}
+  - {fileID: 1750837974}
