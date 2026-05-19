@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.AI;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(NavMeshAgent))]
 public class GhostPatrol : MonoBehaviour
 {
     public Transform[] waypoints;
@@ -8,13 +9,16 @@ public class GhostPatrol : MonoBehaviour
     public float rotationSpeed = 5f;
     public float waypointReachDistance = 1f;
 
-    private CharacterController _controller;
+    private NavMeshAgent _agent;
     private int _currentIndex = 0;
-    private float _verticalVelocity = 0f;
+    private bool _destinationSet = false;
 
     void Start()
     {
-        _controller = GetComponent<CharacterController>();
+        _agent = GetComponent<NavMeshAgent>();
+        _agent.speed = speed;
+        _agent.angularSpeed = 0f; // disable agent auto-rotation; we handle it manually
+        _agent.autoBraking = false; // keep moving without slowing near waypoints
 
         if (waypoints == null || waypoints.Length == 0)
         {
@@ -37,51 +41,40 @@ public class GhostPatrol : MonoBehaviour
                 _currentIndex = i;
             }
         }
+
+        SetDestination(_currentIndex);
     }
 
     void Update()
     {
         if (waypoints == null || waypoints.Length == 0) return;
+        if (!_destinationSet) return;
 
-        Transform target = waypoints[_currentIndex];
-        if (target == null) return;
+        // Wait until the agent path is ready before checking distance
+        if (_agent.pathPending) return;
 
-        Vector3 destination = target.position;
-        Vector3 toTarget = destination - transform.position;
-        float distanceXZ = new Vector2(toTarget.x, toTarget.z).magnitude;
-
-        // Advance to next waypoint when within reach distance
-        if (distanceXZ < waypointReachDistance)
+        if (_agent.remainingDistance <= waypointReachDistance)
         {
             _currentIndex = (_currentIndex + 1) % waypoints.Length;
-            return;
+            SetDestination(_currentIndex);
         }
-
-        // Move toward current waypoint (horizontal only)
-        Vector3 moveDir = new Vector3(toTarget.x, 0f, toTarget.z).normalized;
-
-        // Apply gravity so the ghost stays grounded on terrain
-        if (_controller.isGrounded)
-        {
-            _verticalVelocity = -0.5f; // small downward force to keep grounded
-        }
-        else
-        {
-            _verticalVelocity += Physics.gravity.y * Time.deltaTime;
-        }
-
-        Vector3 motion = moveDir * speed + Vector3.up * _verticalVelocity;
-        _controller.Move(motion * Time.deltaTime);
 
         // Smoothly rotate to face direction of travel
-        if (moveDir != Vector3.zero)
+        if (_agent.velocity.sqrMagnitude > 0.01f)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(moveDir);
+            Quaternion targetRotation = Quaternion.LookRotation(_agent.velocity.normalized);
             transform.rotation = Quaternion.Slerp(
                 transform.rotation,
                 targetRotation,
                 rotationSpeed * Time.deltaTime
             );
         }
+    }
+
+    private void SetDestination(int index)
+    {
+        if (waypoints[index] == null) return;
+        _agent.SetDestination(waypoints[index].position);
+        _destinationSet = true;
     }
 }
