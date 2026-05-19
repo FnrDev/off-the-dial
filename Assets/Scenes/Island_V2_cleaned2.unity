@@ -12844,6 +12844,105 @@ Transform:
   - {fileID: 1171669213}
   m_Father: {fileID: 1322030501}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &88276850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 88276851}
+  - component: {fileID: 88276852}
+  m_Layer: 0
+  m_Name: TaskListUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &88276851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88276850}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10, y: -1070, z: 0}
+  m_LocalScale: {x: 1.5020863, y: 1.5020863, z: 1.5020863}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1689106526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &88276852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88276850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64f25079c24c8d43843b1367e358f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TaskListUI
+  Tasks:
+  - Id: fix_wiring
+    Category: Electrical
+    TaskName: Fix Wiring
+    RequiredCount: 3
+    CurrentCount: 0
+    Completed: 0
+  - Id: swipe_card
+    Category: Admin
+    TaskName: Swipe Card
+    RequiredCount: 1
+    CurrentCount: 0
+    Completed: 0
+  - Id: start_reactor
+    Category: Reactor
+    TaskName: Start Reactor
+    RequiredCount: 1
+    CurrentCount: 0
+    Completed: 0
+  - Id: clear_asteroids
+    Category: Weapons
+    TaskName: Clear Asteroids
+    RequiredCount: 20
+    CurrentCount: 0
+    Completed: 0
+  - Id: fuel_engines
+    Category: Storage
+    TaskName: Fuel Engines
+    RequiredCount: 2
+    CurrentCount: 0
+    Completed: 0
+  - Id: clean_o2_filter
+    Category: O2
+    TaskName: Clean O2 Filter
+    RequiredCount: 1
+    CurrentCount: 0
+    Completed: 0
+  - Id: stabilize_steer
+    Category: Navigation
+    TaskName: Stabilize Steering
+    RequiredCount: 1
+    CurrentCount: 0
+    Completed: 0
+  PanelPlacement: 2
+  PanelWidth: 360
+  GapBelowFps: 8
+  FallbackCornerMargin: {x: 12, y: 12}
+  FontSize: 16
+  HeaderFontSize: 16
+  HeaderText: TOTAL TASKS COMPLETED
+  IncompleteColor: {r: 1, g: 1, b: 1, a: 1}
+  CompleteColor: {r: 0.3, g: 0.85, b: 0.3, a: 1}
+  BarBackColor: {r: 0, g: 0, b: 0, a: 0.55}
+  BarFillColor: {r: 0.3, g: 0.85, b: 0.3, a: 1}
+  ShowProgressBar: 0
 --- !u!1 &90544058
 GameObject:
   m_ObjectHideFlags: 0
@@ -28279,8 +28378,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266196249}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 113.74357, y: -61.752438, z: -184.89703}
+  m_LocalRotation: {x: 0, y: 0.9912634, z: 0, w: -0.13189745}
+  m_LocalPosition: {x: 108.11849, y: -62.979725, z: -205.66022}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -450770,7 +450869,7 @@ Transform:
   m_GameObject: {fileID: 1495469881}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14, y: 2.7, z: 5}
+  m_LocalPosition: {x: 113.74357, y: -60.052437, z: -184.89703}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -462374,7 +462473,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 88276851}
   m_Father: {fileID: 1264045854}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
