@@ -26355,7 +26355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
       propertyPath: OnPadlockUnlock.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
       propertyPath: OnPadlockUnlock.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -26363,6 +26363,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
       propertyPath: OnPadlockUnlock.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
+      propertyPath: OnPadlockUnlock.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
@@ -26374,11 +26378,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1916497235}
     - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
+      propertyPath: OnPadlockUnlock.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1928091480}
+    - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
       propertyPath: OnPadlockUnlock.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
       propertyPath: OnPadlockUnlock.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
+      propertyPath: OnPadlockUnlock.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
@@ -26390,11 +26402,19 @@ PrefabInstance:
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
+      propertyPath: OnPadlockUnlock.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
       propertyPath: OnPadlockUnlock.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
       propertyPath: OnPadlockUnlock.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
+      propertyPath: OnPadlockUnlock.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
@@ -26406,11 +26426,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
+      propertyPath: OnPadlockUnlock.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
       propertyPath: OnPadlockUnlock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
       propertyPath: OnPadlockUnlock.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4823023922225170056, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
+      propertyPath: OnPadlockUnlock.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8449044415099324718, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
@@ -481122,6 +481150,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4266008919332364299, guid: 0e0c02625d8065741952fbbb13714610, type: 3}
+--- !u!1 &1928091480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9082310802317120404, guid: afa053a3537936b42be3fd87e924ed8b, type: 3}
+  m_PrefabInstance: {fileID: 230604418}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1930197689
 GameObject:
   m_ObjectHideFlags: 0
