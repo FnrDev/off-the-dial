@@ -138,7 +138,7 @@ Material:
     - _BlendTileSize: 0.00168
     - _CastShadows: 1
     - _ColorInfluence: 0
-    - _Cull: 2
+    - _Cull: 0
     - _Debug: 0
     - _DstBlend: 0
     - _DstBlendAlpha: 0
