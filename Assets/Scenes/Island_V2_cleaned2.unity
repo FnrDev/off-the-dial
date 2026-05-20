@@ -62285,11 +62285,11 @@ MonoBehaviour:
   speed: 2
   rotationSpeed: 5
   waypointReachDistance: 1
-  detectionRange: 15
+  detectionRange: 5
   chaseSpeed: 4
   escapeRange: 20
-  catchDistance: 1.5
-  alertDuration: 2
+  catchDistance: 3
+  alertDuration: 0.5
   OnPlayerCaught:
     m_PersistentCalls:
       m_Calls:
