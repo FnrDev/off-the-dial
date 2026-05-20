@@ -15356,6 +15356,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1031220237}
     m_Modifications:
+    - target: {fileID: 2678131369181415314, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Point Light-3
+      objectReference: {fileID: 0}
     - target: {fileID: 3119818673640827147, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.93
@@ -15396,6 +15400,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Flame candle3
+      objectReference: {fileID: 0}
     - target: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_Name
       value: Candle_3
@@ -15403,13 +15411,49 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 112934320}
   m_SourcePrefab: {fileID: 100100000, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
 --- !u!4 &112934316 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3119818673640827147, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
   m_PrefabInstance: {fileID: 112934315}
   m_PrefabAsset: {fileID: 0}
+--- !u!108 &112934317 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 8626976727075153817, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 112934315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &112934318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 112934315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &112934319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 112934315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &112934320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112934319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419241f97077b49dc942b71f5720f310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleInteract
+  candleIndex: 3
+  flameObject: {fileID: 112934318}
+  candleLight: {fileID: 112934317}
+  interactDistance: 1.5
+  interactKey: 101
+  promptText: {fileID: 0}
 --- !u!1 &112941495
 GameObject:
   m_ObjectHideFlags: 0
@@ -19758,7 +19802,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &161910788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26732,6 +26776,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1031220237}
     m_Modifications:
+    - target: {fileID: 2678131369181415314, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Point Light-9
+      objectReference: {fileID: 0}
     - target: {fileID: 3119818673640827147, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.748896
@@ -26772,6 +26820,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Flame candle9
+      objectReference: {fileID: 0}
     - target: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_Name
       value: Candle_9
@@ -26811,8 +26863,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 419241f97077b49dc942b71f5720f310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CandleInteract
-  candleIndex: 0
-  churchPuzzle: {fileID: 0}
+  candleIndex: 9
+  flameObject: {fileID: 242688544}
+  candleLight: {fileID: 242688540}
+  interactDistance: 1.5
+  interactKey: 101
+  promptText: {fileID: 0}
+--- !u!1 &242688544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 242688539}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &242784814
 GameObject:
   m_ObjectHideFlags: 0
@@ -26979,30 +27040,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cdc141942754d919a8bef7e9f506d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChurchPuzzle
-  candleFlames:
-  - {fileID: 242688541}
-  - {fileID: 698552346}
-  - {fileID: 580561487}
-  - {fileID: 0}
-  - {fileID: 655747638}
-  - {fileID: 655747638}
-  - {fileID: 655747638}
-  - {fileID: 655747638}
-  - {fileID: 655747638}
-  - {fileID: 655747638}
-  candleLights:
-  - {fileID: 242688540}
-  - {fileID: 698552345}
-  - {fileID: 580561486}
-  - {fileID: 0}
-  - {fileID: 655747637}
-  - {fileID: 655747637}
-  - {fileID: 655747637}
-  - {fileID: 655747637}
-  - {fileID: 655747637}
-  - {fileID: 655747637}
-  correctOrder: 0400000001000000000000000200000003000000
-  altarReward: {fileID: 0}
+  allCandles:
+  - {fileID: 580561489}
+  - {fileID: 2024072095}
+  - {fileID: 112934320}
+  - {fileID: 1904490488}
+  - {fileID: 676295377}
+  - {fileID: 2009489403}
+  - {fileID: 698552348}
+  - {fileID: 1083628048}
+  - {fileID: 242688543}
+  - {fileID: 655747640}
+  correctSequence: 050000000200000001000000080000000a000000
+  rewardObject: {fileID: 2110634211}
 --- !u!1 &246836617
 GameObject:
   m_ObjectHideFlags: 0
@@ -38580,20 +38630,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
   m_PrefabInstance: {fileID: 2024072091}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &428164119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 428164117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 419241f97077b49dc942b71f5720f310, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CandleInteract
-  candleIndex: 0
-  churchPuzzle: {fileID: 0}
 --- !u!1 &428582777
 GameObject:
   m_ObjectHideFlags: 0
@@ -49822,11 +49858,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3119818673640827147, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -102.846
       objectReference: {fileID: 0}
     - target: {fileID: 3119818673640827147, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Flame candle1
       objectReference: {fileID: 0}
     - target: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_Name
@@ -49867,8 +49907,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 419241f97077b49dc942b71f5720f310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CandleInteract
-  candleIndex: 2
-  churchPuzzle: {fileID: 0}
+  candleIndex: 1
+  flameObject: {fileID: 580561490}
+  candleLight: {fileID: 580561486}
+  interactDistance: 1.5
+  interactKey: 101
+  promptText: {fileID: 0}
+--- !u!1 &580561490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 580561485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &580706787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55953,6 +56002,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1031220237}
     m_Modifications:
+    - target: {fileID: 2678131369181415314, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Point Light-10
+      objectReference: {fileID: 0}
     - target: {fileID: 3119818673640827147, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.744241
@@ -55993,6 +56046,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Flame candle10
+      objectReference: {fileID: 0}
     - target: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_Name
       value: Candle_10
@@ -56032,8 +56089,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 419241f97077b49dc942b71f5720f310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CandleInteract
-  candleIndex: 4
-  churchPuzzle: {fileID: 0}
+  candleIndex: 10
+  flameObject: {fileID: 655747641}
+  candleLight: {fileID: 655747637}
+  interactDistance: 1.5
+  interactKey: 101
+  promptText: {fileID: 0}
+--- !u!1 &655747641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 655747636}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &655793734
 GameObject:
   m_ObjectHideFlags: 0
@@ -58067,6 +58133,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1031220237}
     m_Modifications:
+    - target: {fileID: 2678131369181415314, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Point Light-5
+      objectReference: {fileID: 0}
     - target: {fileID: 3119818673640827147, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.019
@@ -58107,6 +58177,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Flame candle5
+      objectReference: {fileID: 0}
     - target: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_Name
       value: Candle_5
@@ -58141,8 +58215,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 419241f97077b49dc942b71f5720f310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CandleInteract
-  candleIndex: 1
-  churchPuzzle: {fileID: 0}
+  candleIndex: 5
+  flameObject: {fileID: 676295379}
+  candleLight: {fileID: 676295378}
+  interactDistance: 1.5
+  interactKey: 101
+  promptText: {fileID: 0}
+--- !u!108 &676295378 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 8626976727075153817, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 676295374}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &676295379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 676295374}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &678609645
 GameObject:
   m_ObjectHideFlags: 0
@@ -59457,6 +59545,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1031220237}
     m_Modifications:
+    - target: {fileID: 2678131369181415314, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Point Light-7
+      objectReference: {fileID: 0}
     - target: {fileID: 3119818673640827147, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.6511965
@@ -59497,6 +59589,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Flame candle7
+      objectReference: {fileID: 0}
     - target: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_Name
       value: Candle_7
@@ -59536,8 +59632,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 419241f97077b49dc942b71f5720f310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CandleInteract
-  candleIndex: 1
-  churchPuzzle: {fileID: 0}
+  candleIndex: 7
+  flameObject: {fileID: 698552349}
+  candleLight: {fileID: 698552345}
+  interactDistance: 1.5
+  interactKey: 101
+  promptText: {fileID: 0}
+--- !u!1 &698552349 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 698552344}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &699212607 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8801268246270711772, guid: 4f4c1f89fe85fef4bb08f5771e672884, type: 3}
@@ -413963,6 +414068,9 @@ PrefabInstance:
       addedObject: {fileID: 655747639}
     - targetCorrespondingSourceObject: {fileID: 4890864788971770562, guid: b716556288ee0154b9205b79114da19a, type: 3}
       insertIndex: 10
+      addedObject: {fileID: 2110634212}
+    - targetCorrespondingSourceObject: {fileID: 4890864788971770562, guid: b716556288ee0154b9205b79114da19a, type: 3}
+      insertIndex: 11
       addedObject: {fileID: 244594695}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6861446598108896675, guid: b716556288ee0154b9205b79114da19a, type: 3}
@@ -421104,6 +421212,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1031220237}
     m_Modifications:
+    - target: {fileID: 2678131369181415314, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Point Light-8
+      objectReference: {fileID: 0}
     - target: {fileID: 3119818673640827147, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.6553283
@@ -421144,6 +421256,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Flame candle8
+      objectReference: {fileID: 0}
     - target: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_Name
       value: Candle_8
@@ -421151,13 +421267,49 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1083628048}
   m_SourcePrefab: {fileID: 100100000, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
 --- !u!4 &1083628044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3119818673640827147, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
   m_PrefabInstance: {fileID: 1083628043}
   m_PrefabAsset: {fileID: 0}
+--- !u!108 &1083628045 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 8626976727075153817, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 1083628043}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1083628046 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 1083628043}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1083628047 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 1083628043}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1083628048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083628047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419241f97077b49dc942b71f5720f310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleInteract
+  candleIndex: 8
+  flameObject: {fileID: 1083628046}
+  candleLight: {fileID: 1083628045}
+  interactDistance: 1.5
+  interactKey: 101
+  promptText: {fileID: 0}
 --- !u!1 &1083650415
 GameObject:
   m_ObjectHideFlags: 0
@@ -478734,6 +478886,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1031220237}
     m_Modifications:
+    - target: {fileID: 2678131369181415314, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Point Light-4
+      objectReference: {fileID: 0}
     - target: {fileID: 3119818673640827147, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.935
@@ -478774,6 +478930,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Flame candle4
+      objectReference: {fileID: 0}
     - target: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_Name
       value: Candle_4
@@ -478781,13 +478941,49 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1904490488}
   m_SourcePrefab: {fileID: 100100000, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
 --- !u!4 &1904490484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3119818673640827147, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
   m_PrefabInstance: {fileID: 1904490483}
   m_PrefabAsset: {fileID: 0}
+--- !u!108 &1904490485 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 8626976727075153817, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 1904490483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1904490486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 1904490483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1904490487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 1904490483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1904490488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904490487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419241f97077b49dc942b71f5720f310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleInteract
+  candleIndex: 4
+  flameObject: {fileID: 1904490486}
+  candleLight: {fileID: 1904490485}
+  interactDistance: 1.5
+  interactKey: 101
+  promptText: {fileID: 0}
 --- !u!1 &1904773466
 GameObject:
   m_ObjectHideFlags: 0
@@ -488709,6 +488905,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1031220237}
     m_Modifications:
+    - target: {fileID: 2678131369181415314, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Point Light-6
+      objectReference: {fileID: 0}
     - target: {fileID: 3119818673640827147, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.02
@@ -488749,6 +488949,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Flame candle6
+      objectReference: {fileID: 0}
     - target: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_Name
       value: Candle_6
@@ -488783,8 +488987,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 419241f97077b49dc942b71f5720f310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CandleInteract
-  candleIndex: 1
-  churchPuzzle: {fileID: 0}
+  candleIndex: 6
+  flameObject: {fileID: 2009489405}
+  candleLight: {fileID: 2009489404}
+  interactDistance: 1.5
+  interactKey: 101
+  promptText: {fileID: 0}
+--- !u!108 &2009489404 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 8626976727075153817, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 2009489400}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2009489405 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 2009489400}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2009773728
 GameObject:
   m_ObjectHideFlags: 0
@@ -489789,6 +490007,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1031220237}
     m_Modifications:
+    - target: {fileID: 2678131369181415314, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Point Light-2
+      objectReference: {fileID: 0}
     - target: {fileID: 3119818673640827147, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.6889896
@@ -489829,6 +490051,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+      propertyPath: m_Name
+      value: Flame candle2
+      objectReference: {fileID: 0}
     - target: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       propertyPath: m_Name
       value: Candle_2
@@ -489837,15 +490063,43 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3808405901541156927, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 428164119}
+      addedObject: {fileID: 2024072095}
   m_SourcePrefab: {fileID: 100100000, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
 --- !u!4 &2024072092 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3119818673640827147, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
   m_PrefabInstance: {fileID: 2024072091}
   m_PrefabAsset: {fileID: 0}
+--- !u!108 &2024072093 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 8626976727075153817, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 2024072091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2024072094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5234054274232251517, guid: d0c9696420ea3074ba2323e38117544b, type: 3}
+  m_PrefabInstance: {fileID: 2024072091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2024072095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024072094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419241f97077b49dc942b71f5720f310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleInteract
+  candleIndex: 2
+  flameObject: {fileID: 428164117}
+  candleLight: {fileID: 2024072093}
+  interactDistance: 1.5
+  interactKey: 101
+  promptText: {fileID: 0}
 --- !u!1 &2025405638
 GameObject:
   m_ObjectHideFlags: 0
@@ -497587,6 +497841,118 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8213271425034996847, guid: 0e0c02625d8065741952fbbb13714610, type: 3}
+--- !u!1 &2110634211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2110634212}
+  - component: {fileID: 2110634215}
+  - component: {fileID: 2110634214}
+  - component: {fileID: 2110634213}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2110634212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110634211}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0.19080894, w: 0.9816273}
+  m_LocalPosition: {x: -9.756, y: 0.623, z: 0.011}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1031220237}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22}
+--- !u!65 &2110634213
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110634211}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2110634214
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110634211}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2110634215
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110634211}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2112947612
 GameObject:
   m_ObjectHideFlags: 0

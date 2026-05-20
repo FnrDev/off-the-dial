@@ -1,75 +1,126 @@
+using System.Collections;
 using UnityEngine;
+
+/// Correct extinguish order: Candle 5 → 2 → 1 → 8 → 10
 
 public class ChurchPuzzle : MonoBehaviour
 {
-    [Header("Candles (assign in order: 0,1,2,3,4)")]
-    public GameObject[] candleFlames;  // drag the Flame child of each puzzle candle
-    public Light[] candleLights;
+    public static ChurchPuzzle Instance { get; private set; }
 
-    [Header("Puzzle Settings")]
-    // Player must extinguish candles in this order: 5,2,1,3,4
-    public int[] correctOrder = { 4, 1, 0, 2, 3 };
+    [Header("All Candles (drag Candle 1 to Candle 10 in order)")]
+    public CandleInteract[] allCandles;
 
-    [Header("References")]
-    public GameObject altarReward;
+    [Header("Puzzle Sequence (1-based candle indices)")]
+    [Tooltip("Correct blow-out order. Default: 5, 2, 1, 8, 10")]
+    public int[] correctSequence = { 5, 2, 1, 8, 10 };
 
-    private int[] playerOrder = new int[5];
-    private int currentStep = 0;
-    private bool puzzleSolved = false;
+    [Header("Reward")]
+    [Tooltip("Any GameObject to activate on solve: door, chest, key item, etc.")]
+    public GameObject rewardObject;
+
+    private int[] _playerSequence;
+    private int _currentStep = 0;
+    private bool _puzzleSolved = false;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        Debug.Log("[ChurchPuzzle] Instance set in Awake.");
+    }
 
     void Start()
     {
-        // All puzzle candles start lit
-        for (int i = 0; i < candleFlames.Length; i++)
+        _playerSequence = new int[correctSequence.Length];
+        ResetAllCandles();
+    }
+
+    public void OnCandleBlown(int candleIndex)
+    {
+        if (_puzzleSolved) return;
+
+        _playerSequence[_currentStep] = candleIndex;
+        SetCandleLit(candleIndex, false);
+        _currentStep++;
+
+        Debug.Log($"[ChurchPuzzle] Step {_currentStep}/{correctSequence.Length} — Candle {candleIndex} blown out.");
+
+        if (_currentStep >= correctSequence.Length)
         {
-            candleFlames[i].SetActive(true);
-            candleLights[i].enabled = true;
+            StartCoroutine(CheckSolutionDelayed());
         }
     }
 
-    public void ExtinguishCandle(int candleIndex)
+    // Small delay so the last candle visually blows out before reset
+    IEnumerator CheckSolutionDelayed()
     {
-        if (puzzleSolved) return;
-
-        playerOrder[currentStep] = candleIndex;
-        candleFlames[candleIndex].SetActive(false);
-        candleLights[candleIndex].enabled = false;
-        currentStep++;
-
-        if (currentStep == 5)
-            CheckSolution();
+        yield return new WaitForSeconds(0.5f);
+        CheckSolution();
     }
 
     void CheckSolution()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < correctSequence.Length; i++)
         {
-            if (playerOrder[i] != correctOrder[i])
+            if (_playerSequence[i] != correctSequence[i])
             {
-                ResetPuzzle();
+                Debug.Log($"[ChurchPuzzle] Wrong sequence! Resetting.");
+                ResetAllCandles();
                 return;
             }
         }
-        PuzzleSolved();
+
+        StartCoroutine(SolvePuzzle());
     }
 
-    void ResetPuzzle()
+    void ResetAllCandles()
     {
-        currentStep = 0;
-        // Turn all candles back on
-        for (int i = 0; i < candleFlames.Length; i++)
+        _currentStep = 0;
+        _playerSequence = new int[correctSequence.Length];
+
+        foreach (var candle in allCandles)
         {
-            candleFlames[i].SetActive(true);
-            candleLights[i].enabled = true;
+            if (candle != null)
+                candle.SetLit(true);
         }
-        Debug.Log("Wrong order — candles reset!");
+
+        Debug.Log("[ChurchPuzzle] All candles re-lit. Puzzle reset.");
     }
 
-    void PuzzleSolved()
+    IEnumerator SolvePuzzle()
     {
-        puzzleSolved = true;
-        if (altarReward != null)
-            altarReward.SetActive(true);
-        Debug.Log("Church puzzle solved! Altar unlocked.");
+        _puzzleSolved = true;
+        Debug.Log("[ChurchPuzzle] Puzzle SOLVED!");
+
+        yield return new WaitForSeconds(1.5f);
+
+        if (rewardObject != null)
+        {
+            rewardObject.SetActive(true);
+            Debug.Log($"[ChurchPuzzle] Reward activated: {rewardObject.name}");
+        }
+        else
+        {
+            Debug.Log("[ChurchPuzzle] No reward object assigned.");
+        }
+    }
+
+    void SetCandleLit(int candleIndex, bool lit)
+    {
+        int arrayIndex = candleIndex - 1;
+        if (arrayIndex >= 0 && arrayIndex < allCandles.Length && allCandles[arrayIndex] != null)
+            allCandles[arrayIndex].SetLit(lit);
+        else
+            Debug.LogWarning($"[ChurchPuzzle] Candle index {candleIndex} out of range or not assigned.");
+    }
+
+    public void ForceReset()
+    {
+        _puzzleSolved = false;
+        ResetAllCandles();
     }
 }
