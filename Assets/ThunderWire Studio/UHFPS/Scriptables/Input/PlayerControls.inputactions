@@ -19,7 +19,7 @@
                     "name": "input.action.sprint",
                     "type": "Button",
                     "id": "883c57ef-56d5-4f0d-8c3e-a962f30f59a1",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -127,7 +127,7 @@
                     "name": "input.action.unequip",
                     "type": "Button",
                     "id": "0ab2a7a0-2f10-47a9-9125-85e654d2491a",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -358,6 +358,61 @@
                     "action": "input.action.look*",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "c625d05e-3e28-457f-8532-642d31694ae5",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "ScaleVector2(x=0.5,y=0.5)",
+                    "groups": "",
+                    "action": "input.action.look*",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "8813eef9-9cf6-42f0-9e43-0bbdde2f7265",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "input.action.look*",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "c36d985e-74ac-4c37-98f9-44a7c7d4150d",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "input.action.look*",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "f3f5bf92-af47-4ae6-bd7c-8fd34629eaaf",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "input.action.look*",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "285db161-12fc-4d7a-8006-d4acabeae237",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "input.action.look*",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "Lean Axis",
