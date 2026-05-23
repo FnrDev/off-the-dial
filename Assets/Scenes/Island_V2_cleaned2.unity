@@ -489356,7 +489356,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.95686275, b: 0.8784314, a: 1}
   m_Intensity: 1.5
-  m_Range: 8
+  m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 10, y: 10}
@@ -489429,8 +489429,7 @@ MonoBehaviour:
   FlickerOffRate:
     min: 0.05
     max: 0.05
-  BallastBuzz:
-  - {fileID: 8300000, guid: 1a44eafc413cb5c46b293e3d2c8fe5d0, type: 3}
+  BallastBuzz: []
   BallastVolume: 1
   MaxSoundDistance: 50
   EnableEmission: 0
