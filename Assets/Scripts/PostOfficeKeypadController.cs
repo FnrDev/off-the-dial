@@ -6,13 +6,23 @@ public class PostOfficeKeypadController : MonoBehaviour
     [SerializeField] private KeypadPuzzle keypadPuzzle;
     [SerializeField] private Light keypadLight;
 
-    public void RestorePower()
+    private void Start()
     {
-        keypadPuzzle.enabled = true;
-
-        if (keypadLight != null)
-        {
-            keypadLight.enabled = true;
-        }
+        keypadPuzzle.enabled = false;
+        var col = keypadPuzzle.GetComponent<Collider>();
+        if (col != null) col.enabled = false;
     }
+
+    public void RestorePower()
+{
+    keypadPuzzle.enabled = true;
+    var col = keypadPuzzle.GetComponent<Collider>();
+    if (col != null) col.enabled = true;
+
+    if (keypadLight != null)
+    {
+        keypadLight.gameObject.SetActive(true); 
+        keypadLight.enabled = true;             
+    }
+}
 }
