@@ -19,6 +19,11 @@ public class CandleInteract : MonoBehaviour
     [Header("UI")]
     public TextMeshProUGUI promptText;
 
+
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip blowOutSound;
+    
     private Transform _player;
     private bool _isLit = true;
     private bool _playerInRange = false;
@@ -49,7 +54,21 @@ public class CandleInteract : MonoBehaviour
 
         if (promptText != null)
         {
-            promptText.text = (_playerInRange && _isLit) ? "Press E to Blow Out" : "";
+            if (_playerInRange)
+            {
+                if (_isLit)
+                {
+                    promptText.text = "[E] to Blow Out";
+                }
+                else
+                {
+                    promptText.text = ""; // IMPORTANT: no prompt if already off
+                }
+            }
+            else
+            {
+                promptText.text = "";
+            }
         }
 
         if (_playerInRange && _isLit && Keyboard.current.eKey.wasPressedThisFrame)
@@ -81,6 +100,9 @@ public class CandleInteract : MonoBehaviour
         // Clear prompt when extinguished
         if (!lit && promptText != null)
             promptText.text = "";
+
+            if (!lit && audioSource != null && blowOutSound != null)
+        audioSource.PlayOneShot(blowOutSound);
     }
 
     public bool IsLit => _isLit;
