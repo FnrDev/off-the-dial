@@ -18,11 +18,5 @@ public class PostOfficeKeypadController : MonoBehaviour
     keypadPuzzle.enabled = true;
     var col = keypadPuzzle.GetComponent<Collider>();
     if (col != null) col.enabled = true;
-
-    if (keypadLight != null)
-    {
-        keypadLight.gameObject.SetActive(true); 
-        keypadLight.enabled = true;             
-    }
 }
 }
