@@ -12899,45 +12899,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TaskListUI
   Tasks:
-  - Id: fix_wiring
-    Category: Electrical
-    TaskName: Fix Wiring
-    RequiredCount: 3
-    CurrentCount: 0
-    Completed: 0
-  - Id: swipe_card
-    Category: Admin
-    TaskName: Swipe Card
+  - Id: head_post_office
+    Category:
+    TaskName: Head to Post office
     RequiredCount: 1
     CurrentCount: 0
     Completed: 0
-  - Id: start_reactor
-    Category: Reactor
-    TaskName: Start Reactor
+  - Id: head_church
+    Category:
+    TaskName: Head to church
     RequiredCount: 1
     CurrentCount: 0
     Completed: 0
-  - Id: clear_asteroids
-    Category: Weapons
-    TaskName: Clear Asteroids
-    RequiredCount: 20
-    CurrentCount: 0
-    Completed: 0
-  - Id: fuel_engines
-    Category: Storage
-    TaskName: Fuel Engines
-    RequiredCount: 2
-    CurrentCount: 0
-    Completed: 0
-  - Id: clean_o2_filter
-    Category: O2
-    TaskName: Clean O2 Filter
+  - Id: head_dukes_dockyard
+    Category:
+    TaskName: Head to duke's dockyard
     RequiredCount: 1
     CurrentCount: 0
     Completed: 0
-  - Id: stabilize_steer
-    Category: Navigation
-    TaskName: Stabilize Steering
+  - Id: head_gas_station
+    Category:
+    TaskName: Head to gas station
+    RequiredCount: 1
+    CurrentCount: 0
+    Completed: 0
+  - Id: head_tower
+    Category:
+    TaskName: Head to tower
     RequiredCount: 1
     CurrentCount: 0
     Completed: 0

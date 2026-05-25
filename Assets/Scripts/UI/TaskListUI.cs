@@ -6,16 +6,12 @@ using TMPro;
 using UHFPS.Runtime;
 
 /// <summary>
-/// Among Us style task list HUD. Sits in the top-right, directly below the FPS
-/// counter, and shows the list of tasks the player still needs to finish.
-/// The whole UI is built programmatically at runtime, so the only setup needed
-/// is to have this component live on an active object in the gameplay scene
-/// (it ships on the GAMEMANAGER prefab next to the FPS counter).
+/// Task list HUD. Sits below the FPS counter and shows the next task the
+/// player needs to finish (only the first incomplete task is visible at a
+/// time). The whole UI is built programmatically at runtime.
 ///
 /// Drive it from gameplay code via the static helpers, e.g.:
-///   TaskListUI.Complete("o2_filter");
-///   TaskListUI.AddProgress("clear_asteroids");      // +1
-///   TaskListUI.AddProgress("fix_wiring", 2);        // +2
+///   TaskListUI.Complete("head_post_office");
 /// </summary>
 public class TaskListUI : MonoBehaviour
 {
@@ -25,11 +21,11 @@ public class TaskListUI : MonoBehaviour
         [Tooltip("Unique id used by gameplay code to complete / progress this task.")]
         public string Id;
 
-        [Tooltip("Location / group shown before the colon, e.g. \"Electrical\".")]
-        public string Category = "Electrical";
+        [Tooltip("Optional location / group shown before the colon. Leave empty to show only TaskName.")]
+        public string Category = "";
 
-        [Tooltip("Short task description, e.g. \"Fix Wiring\".")]
-        public string TaskName = "Fix Wiring";
+        [Tooltip("Short task description, e.g. \"Head to Post office\".")]
+        public string TaskName = "";
 
         [Tooltip("How many steps to finish this task. 1 = simple task with no (x/y) counter.")]
         [Min(1)] public int RequiredCount = 1;
@@ -45,13 +41,11 @@ public class TaskListUI : MonoBehaviour
     [Tooltip("Tasks the player must finish. Can also be added at runtime via AddTask().")]
     public List<TaskEntry> Tasks = new()
     {
-        new TaskEntry { Id = "fix_wiring",       Category = "Electrical",  TaskName = "Fix Wiring",         RequiredCount = 3  },
-        new TaskEntry { Id = "swipe_card",       Category = "Admin",       TaskName = "Swipe Card",         RequiredCount = 1  },
-        new TaskEntry { Id = "start_reactor",    Category = "Reactor",     TaskName = "Start Reactor",      RequiredCount = 1  },
-        new TaskEntry { Id = "clear_asteroids",  Category = "Weapons",     TaskName = "Clear Asteroids",    RequiredCount = 20 },
-        new TaskEntry { Id = "fuel_engines",     Category = "Storage",     TaskName = "Fuel Engines",       RequiredCount = 2  },
-        new TaskEntry { Id = "clean_o2_filter",  Category = "O2",          TaskName = "Clean O2 Filter",    RequiredCount = 1  },
-        new TaskEntry { Id = "stabilize_steer",  Category = "Navigation",  TaskName = "Stabilize Steering", RequiredCount = 1  },
+        new TaskEntry { Id = "head_post_office",   Category = "", TaskName = "Head to Post office",    RequiredCount = 1 },
+        new TaskEntry { Id = "head_church",        Category = "", TaskName = "Head to church",         RequiredCount = 1 },
+        new TaskEntry { Id = "head_dukes_dockyard",Category = "", TaskName = "Head to duke's dockyard",RequiredCount = 1 },
+        new TaskEntry { Id = "head_gas_station",   Category = "", TaskName = "Head to gas station",    RequiredCount = 1 },
+        new TaskEntry { Id = "head_tower",         Category = "", TaskName = "Head to tower",          RequiredCount = 1 },
     };
 
     public enum Placement
@@ -343,17 +337,27 @@ public class TaskListUI : MonoBehaviour
         if (!_built) return;
 
         int done = 0;
+        bool activeShown = false;
         foreach (var t in Tasks)
         {
             if (t.Completed) done++;
             if (t.Label == null) continue;
 
-            string label = $"{t.Category}: {t.TaskName}";
+            // Only the first incomplete task is visible; completed and future
+            // tasks stay hidden until their turn.
+            bool isActive = !t.Completed && !activeShown;
+            t.Label.gameObject.SetActive(isActive);
+            if (!isActive) continue;
+            activeShown = true;
+
+            string label = string.IsNullOrEmpty(t.Category)
+                ? t.TaskName
+                : $"{t.Category}: {t.TaskName}";
             if (t.RequiredCount > 1)
                 label += $" ({t.CurrentCount}/{t.RequiredCount})";
 
             t.Label.text = label;
-            t.Label.color = t.Completed ? CompleteColor : IncompleteColor;
+            t.Label.color = IncompleteColor;
         }
 
         if (_barFill != null)
