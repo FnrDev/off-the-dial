@@ -22,9 +22,9 @@ public class BroadcastPanel : MonoBehaviour
             Debug.Log("Need all 5 voice fragments. Currently have: " + count + "/5");
 
             // Show message to player via GameManager
-            GameManager.Instance.ShowNotification(
-                "Collect all 5 voice fragments first. " +
-                count + "/5 collected.");
+            GameManager.Instance.ShowHintMessage(
+                "Collect all 5 voice fragments. " +
+                count + "/5 collected.", 3f);
         }
     }
 
