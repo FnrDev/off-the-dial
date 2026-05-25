@@ -13032,6 +13032,176 @@ Transform:
   - {fileID: 1938215272}
   m_Father: {fileID: 634072513}
   m_LocalEulerAnglesHint: {x: -89.888084, y: 0, z: 0}
+--- !u!1 &92300356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 92300361}
+  - component: {fileID: 92300360}
+  - component: {fileID: 92300359}
+  - component: {fileID: 92300358}
+  - component: {fileID: 92300357}
+  - component: {fileID: 92300362}
+  m_Layer: 6
+  m_Name: BroadcastPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &92300357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92300356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3295b26b8148e483aa81c1bc3f530811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BroadcastPanel
+  endingManager: {fileID: 967921610}
+  requiredItemGUID: 2e96a8436e6e4cc1a3238e1a70f4ee2e
+--- !u!65 &92300358
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92300356}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &92300359
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92300356}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &92300360
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92300356}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &92300361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92300356}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 433.61902, y: -12.913, z: -458.30148}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &92300362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92300356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3672e961bc7bf394491120367c76586e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UHFPS.Runtime.CustomInteractEvent
+  UseOnStartEvent: 1
+  UseOnHoldEvent: 0
+  UseOnStopEvent: 0
+  FreezePlayer: 0
+  InteractOnce: 0
+  UseInteractSound: 0
+  InteractSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  OnStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 92300357}
+        m_TargetAssemblyTypeName: BroadcastPanel, Assembly-CSharp
+        m_MethodName: TryBroadcast
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnHold:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStop:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &94768336
 GameObject:
   m_ObjectHideFlags: 0
@@ -50196,7 +50366,6 @@ Transform:
   - {fileID: 1030974608}
   - {fileID: 1030974606}
   - {fileID: 1031214068}
-  - {fileID: 1031220228}
   - {fileID: 1031213590}
   - {fileID: 343333017}
   - {fileID: 487039985}
@@ -81188,7 +81357,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TowerEndingManager
   rainSplash: {fileID: 2000000045}
   rainFadeTime: 2
-  broadcastComplete: 0
+  ghost: {fileID: 0}
+  directionalLight: {fileID: 1843110742}
+  ambientHorror: {fileID: 1700331797}
 --- !u!1 &968701814
 GameObject:
   m_ObjectHideFlags: 0
@@ -414778,68 +414949,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7384894999507251409, guid: 395ccfc6be1c4954bbf079f013b5657d, type: 3}
   m_PrefabInstance: {fileID: 1031220066}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1031220227
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 579298066}
-    m_Modifications:
-    - target: {fileID: 1031220207, guid: abc00000000015144668844566560444, type: 3}
-      propertyPath: m_Name
-      value: BP_Rifle_C_39_SM_rifle_mag_1_1444
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031220208, guid: abc00000000015144668844566560444, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031220208, guid: abc00000000015144668844566560444, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031220208, guid: abc00000000015144668844566560444, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031220208, guid: abc00000000015144668844566560444, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 246.81075
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031220208, guid: abc00000000015144668844566560444, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -18.916674
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031220208, guid: abc00000000015144668844566560444, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -257.36652
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031220208, guid: abc00000000015144668844566560444, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5598519
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031220208, guid: abc00000000015144668844566560444, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.43755087
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031220208, guid: abc00000000015144668844566560444, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.4602379
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031220208, guid: abc00000000015144668844566560444, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.5322559
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: abc00000000015144668844566560444, type: 3}
---- !u!4 &1031220228 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1031220208, guid: abc00000000015144668844566560444, type: 3}
-  m_PrefabInstance: {fileID: 1031220227}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1031220236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -508164,3 +508273,4 @@ SceneRoots:
   - {fileID: 2000000041}
   - {fileID: 2000000044}
   - {fileID: 1813044642}
+  - {fileID: 92300361}
