@@ -8,15 +8,34 @@ public class BroadcastPanel : MonoBehaviour
 
     public void TryBroadcast()
     {
-        if (Inventory.Instance.ContainsItem(requiredItemGUID))
+        if (Inventory.Instance.carryingItems != null &&
+            CountTapes() >= 5)
         {
-            Inventory.Instance.RemoveItem(requiredItemGUID);
+            for (int i = 0; i < 5; i++)
+                Inventory.Instance.RemoveItem(requiredItemGUID);
             endingManager.TriggerGoodEnding();
             Debug.Log("BROADCAST SUCCESS - Good Ending!");
         }
         else
         {
-            Debug.Log("Need VHS tape to broadcast!");
+            int count = CountTapes();
+            Debug.Log("Need all 5 voice fragments. Currently have: " + count + "/5");
+
+            // Show message to player via GameManager
+            GameManager.Instance.ShowNotification(
+                "Collect all 5 voice fragments first. " +
+                count + "/5 collected.");
         }
+    }
+
+    private int CountTapes()
+    {
+        int count = 0;
+        foreach (var item in Inventory.Instance.carryingItems)
+        {
+            if (item.Key.ItemGuid == requiredItemGUID)
+                count += item.Key.Quantity;
+        }
+        return count;
     }
 }

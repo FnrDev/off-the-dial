@@ -12900,31 +12900,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TaskListUI
   Tasks:
   - Id: head_post_office
-    Category:
+    Category: 
     TaskName: Head to Post office
     RequiredCount: 1
     CurrentCount: 0
     Completed: 0
   - Id: head_church
-    Category:
+    Category: 
     TaskName: Head to church
     RequiredCount: 1
     CurrentCount: 0
     Completed: 0
   - Id: head_dukes_dockyard
-    Category:
+    Category: 
     TaskName: Head to duke's dockyard
     RequiredCount: 1
     CurrentCount: 0
     Completed: 0
   - Id: head_gas_station
-    Category:
+    Category: 
     TaskName: Head to gas station
     RequiredCount: 1
     CurrentCount: 0
     Completed: 0
   - Id: head_tower
-    Category:
+    Category: 
     TaskName: Head to tower
     RequiredCount: 1
     CurrentCount: 0
@@ -491737,7 +491737,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1862489280}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2000000003
 MonoBehaviour:
@@ -491892,7 +491892,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1030976557}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2000000022
 AudioSource:
@@ -508252,3 +508252,5 @@ SceneRoots:
   - {fileID: 2000000044}
   - {fileID: 1813044642}
   - {fileID: 92300361}
+  - {fileID: 2000000002}
+  - {fileID: 2000000021}
