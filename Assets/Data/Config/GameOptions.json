@@ -2,7 +2,7 @@
   "language": 0,
   "brightness": 0.25,
   "fov": 81,
-  "sensitivity": 0.7,
+  "sensitivity": 0.6,
   "smoothing": false,
   "smoothing_speed": 0.4,
   "show_fps": true,
@@ -22,5 +22,5 @@
   "pp_grain": true,
   "pp_chromatic_aberration": true,
   "volume_general": 1.0,
-  "volume_music": 1.0
+  "volume_music": 0.450000018
 }

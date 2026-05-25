@@ -187,7 +187,6 @@ public class GhostPatrol : MonoBehaviour
 
     void EnterAlert()
     {
-        if (_state == GhostState.Chase) return;
         _state = GhostState.Alert;
         _alertTimer = 0f;
         _agent.isStopped = true;
