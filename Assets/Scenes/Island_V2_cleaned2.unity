@@ -480740,6 +480740,73 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5601248287887062778, guid: 0e0c02625d8065741952fbbb13714610, type: 3}
+--- !u!1 &1872391223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1872391224}
+  - component: {fileID: 1872391225}
+  - component: {fileID: 1872391226}
+  m_Layer: 0
+  m_Name: TowerApproachTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1872391224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872391223}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 30, y: 20, z: 30}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 14}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1872391225
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872391223}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1872391226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872391223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad4c12789f84496aa76a3ff20430b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TowerApproachTrigger
+  endingManager: {fileID: 967921610}
 --- !u!1 &1873527426 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4101896517270753403, guid: 812696f925248e248b910be3e77f1a8c, type: 3}
@@ -508096,6 +508163,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7190153720686431340, guid: 3c2f506495c58fb4b8590d4b552159fa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 967921608}
+    - targetCorrespondingSourceObject: {fileID: 7190153720686431340, guid: 3c2f506495c58fb4b8590d4b552159fa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1872391224}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6069968545326492730, guid: 3c2f506495c58fb4b8590d4b552159fa, type: 3}
       insertIndex: -1
