@@ -70146,6 +70146,105 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817505163}
   m_CullTransparentMesh: 1
+--- !u!1001 &817768602
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1031213952}
+    m_Modifications:
+    - target: {fileID: 263978045471592150, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      propertyPath: ExamineType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 263978045471592150, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      propertyPath: InteractableType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231688826548651791, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.344
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231688826548651791, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231688826548651791, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.204
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231688826548651791, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9644693
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231688826548651791, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231688826548651791, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.26419508
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231688826548651791, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231688826548651791, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231688826548651791, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231688826548651791, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605262033271063778, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      propertyPath: m_Name
+      value: Radio
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743914404154588851, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4605262033271063778, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 817768605}
+  m_SourcePrefab: {fileID: 100100000, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+--- !u!4 &817768603 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4231688826548651791, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+  m_PrefabInstance: {fileID: 817768602}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &817768604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4605262033271063778, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+  m_PrefabInstance: {fileID: 817768602}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &817768605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817768604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 531a9d7da2428bc48856744034b3fffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UHFPS.Runtime.SoundTrigger
+  TriggerType: 0
+  UseType: 1
+  TriggerSound:
+    audioClip: {fileID: 8300000, guid: e661e434319affd4f94ccf95ebbcfc66, type: 3}
+    volume: 1
 --- !u!1 &818175775
 GameObject:
   m_ObjectHideFlags: 0
@@ -413009,7 +413108,10 @@ PrefabInstance:
       objectReference: {fileID: 2078988412}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1030980926, guid: abc00000000004159845408220471684, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 817768603}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abc00000000004159845408220471684, type: 3}
 --- !u!4 &1031213952 stripped
@@ -459613,15 +459715,15 @@ PrefabInstance:
       objectReference: {fileID: 1655065220}
     - target: {fileID: 8541960315968224901, guid: 471f94be919bb8c4a9b55fab006af519, type: 3}
       propertyPath: PaperText.GlocText
-      value: "*Make your way to the big boat in the dock \u2014 a VHS tape
-        lies waiting on board, and you'll need it before stepping into your final
-        zone.\n\n- From Patrick"
+      value: "*Make your way to the big boat in the dock \u2014 a VHS tape lies waiting
+        on board, and you'll need it before stepping into your final zone.\n\n- From
+        Patrick"
       objectReference: {fileID: 0}
     - target: {fileID: 8541960315968224901, guid: 471f94be919bb8c4a9b55fab006af519, type: 3}
       propertyPath: PaperText.NormalText
-      value: "Make your way to the big boat in the dock \u2014 a VHS tape
-        lies waiting on board, and you'll need it before stepping into your final
-        zone.\n\n- From Patrick"
+      value: "Make your way to the big boat in the dock \u2014 a VHS tape lies waiting
+        on board, and you'll need it before stepping into your final zone.\n\n- From
+        Patrick"
       objectReference: {fileID: 0}
     - target: {fileID: 8747774001340122420, guid: 471f94be919bb8c4a9b55fab006af519, type: 3}
       propertyPath: m_Name
