@@ -751,8 +751,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RadioChannels:
   - ChannelType: 0
-    TunerPosition: -0.0316
-    ChannelAudio: {fileID: 8300000, guid: 9dbe9ceee7139914e9d88758e4092a05, type: 3}
+    TunerPosition: 0
+    ChannelAudio: {fileID: 8300000, guid: 499dc671943b84ee3941981c7023f966, type: 3}
     Volume: 0.5
   - ChannelType: 1
     TunerPosition: -0.0606
@@ -764,7 +764,7 @@ MonoBehaviour:
   TunerLimits:
     min: -0.0817
     max: 0.0033
-  TuneRange: 0.001
+  TuneRange: 0.01
   EmissionKeyword: _EMISSION
   AudioSource: {fileID: 7327323438354522885}
   RadioStatic:
