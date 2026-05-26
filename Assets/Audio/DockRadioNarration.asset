@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb5bd7e8a706a41b793e7440b34eea, type: 3}
+  m_Name: DockRadioNarration
+  m_EditorClassIdentifier:
+  Dialogues:
+  - DialogueAudio: {fileID: 8300000, guid: e661e434319affd4f94ccf95ebbcfc66, type: 3}
+    SubtitleType: 1
+    SingleSubtitle:
+      Time: 0
+      Narrator:
+      NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+      Text:
+        GlocText:
+        NormalText:
+    Subtitles:
+    - rid: 7700000000000000001
+    - rid: 7700000000000000002
+    - rid: 7700000000000000003
+    - rid: 7700000000000000004
+    - rid: 7700000000000000005
+    - rid: 7700000000000000006
+  references:
+    version: 2
+    RefIds:
+    - rid: 7700000000000000001
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 0
+        Narrator: Radio
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "*Make your way to the gas station on the edge of town, past the church where the road disappears into the fog."
+          NormalText: "Make your way to the gas station on the edge of town, past the church where the road disappears into the fog."
+    - rid: 7700000000000000002
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 8
+        Narrator: Radio
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "*It was the last place anyone saw light."
+          NormalText: "It was the last place anyone saw light."
+    - rid: 7700000000000000003
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 11.5
+        Narrator: Radio
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "*If there's still a working line to the outside, you'll find it there."
+          NormalText: "If there's still a working line to the outside, you'll find it there."
+    - rid: 7700000000000000004
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 16
+        Narrator: Radio
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "*The pumps haven't run in years, but something keeps the sign flickering."
+          NormalText: "The pumps haven't run in years, but something keeps the sign flickering."
+    - rid: 7700000000000000005
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 21
+        Narrator: Radio
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "*Follow the road, and don't stray from it."
+          NormalText: "Follow the road, and don't stray from it."
+    - rid: 7700000000000000006
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 24
+        Narrator: Radio
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "*The fog has a way of swallowing those who wander."
+          NormalText: "The fog has a way of swallowing those who wander."
