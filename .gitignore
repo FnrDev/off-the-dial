@@ -99,3 +99,9 @@ InitTestScene*.unity*
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 .DS_Store
 off-the-dial.slnx
+
+
+# Save files
+Assets/Data/SavedGame
+*.bin
+*.png
