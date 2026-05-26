@@ -1,8 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DinerPuzzleManager : MonoBehaviour
 {
+[Header("UI")]
+public TMP_Text sequenceUI;
     public static DinerPuzzleManager Instance;
 
     [Header("Puzzle Sequence")]
@@ -28,6 +31,7 @@ public class DinerPuzzleManager : MonoBehaviour
 
     private void Start()
     {
+UpdateSequenceUI();
         if (freezerReward != null)
             freezerReward.SetActive(false);
     }
@@ -36,9 +40,8 @@ public class DinerPuzzleManager : MonoBehaviour
     {
         if (puzzleSolved)
             return;
-
         playerSequence.Add(input);
-
+UpdateSequenceUI();
         int currentIndex = playerSequence.Count - 1;
 
         if (currentIndex >= correctSequence.Count)
@@ -53,8 +56,11 @@ public class DinerPuzzleManager : MonoBehaviour
 
             if (wrongAudio != null)
                 wrongAudio.Play();
+            sequenceUI.text = "WRONG";
+            UpdateSequenceUI();
 
             playerSequence.Clear();
+            UpdateSequenceUI();
             return;
         }
 
@@ -64,9 +70,37 @@ public class DinerPuzzleManager : MonoBehaviour
             PuzzleSolved();
         }
     }
+   private void UpdateSequenceUI()
+{
+    if (sequenceUI == null) return;
+
+    string display = "";
+
+    for (int i = 0; i < correctSequence.Count; i++)
+    {
+        if (i < playerSequence.Count)
+            display += GetObjectName(playerSequence[i]) + " ";
+        else
+            display += "_ ";
+    }
+
+    sequenceUI.text = display;
+}
+private string GetObjectName(int id)
+{
+    switch (id)
+    {
+        case 1: return "Music";
+        case 2: return "Coffee";
+        case 3: return "Cold Storage";
+        case 4: return "Register";
+        default: return "?";
+    }
+}
 
     private void PuzzleSolved()
     {
+        sequenceUI.text = "OPEN";
         puzzleSolved = true;
 
         if (freezerReward != null)
