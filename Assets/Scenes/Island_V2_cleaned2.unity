@@ -50407,7 +50407,6 @@ Transform:
   - {fileID: 1827797362}
   - {fileID: 1668387967}
   - {fileID: 18444283}
-  - {fileID: 628781564}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &580706787
@@ -412941,7 +412940,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1031213943, guid: abc00000000015573477989753530256, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 628781564}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abc00000000015573477989753530256, type: 3}
 --- !u!4 &1031213950 stripped
@@ -413001,6 +413003,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 3636527157142588982, guid: abc00000000004159845408220471684, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2078988412}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -451641,7 +451647,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 579298066}
+    m_TransformParent: {fileID: 1031213950}
     m_Modifications:
     - target: {fileID: 24232596844513476, guid: 7a27bdd162f84ea40bb25b84529db593, type: 3}
       propertyPath: m_Name
@@ -451657,19 +451663,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3894855787502238423, guid: 7a27bdd162f84ea40bb25b84529db593, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -122.842064
+      value: -0.923
       objectReference: {fileID: 0}
     - target: {fileID: 3894855787502238423, guid: 7a27bdd162f84ea40bb25b84529db593, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -68.47122
+      value: 0.96
       objectReference: {fileID: 0}
     - target: {fileID: 3894855787502238423, guid: 7a27bdd162f84ea40bb25b84529db593, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 121.32835
+      value: 1.194
       objectReference: {fileID: 0}
     - target: {fileID: 3894855787502238423, guid: 7a27bdd162f84ea40bb25b84529db593, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.9848078
       objectReference: {fileID: 0}
     - target: {fileID: 3894855787502238423, guid: 7a27bdd162f84ea40bb25b84529db593, type: 3}
       propertyPath: m_LocalRotation.x
@@ -451677,7 +451683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3894855787502238423, guid: 7a27bdd162f84ea40bb25b84529db593, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000029802322
+      value: -0.17364798
       objectReference: {fileID: 0}
     - target: {fileID: 3894855787502238423, guid: 7a27bdd162f84ea40bb25b84529db593, type: 3}
       propertyPath: m_LocalRotation.z
@@ -459607,15 +459613,15 @@ PrefabInstance:
       objectReference: {fileID: 1655065220}
     - target: {fileID: 8541960315968224901, guid: 471f94be919bb8c4a9b55fab006af519, type: 3}
       propertyPath: PaperText.GlocText
-      value: "*Head down to the old pier by the sea \u2014 a VHS tape lies waiting
-        there, and you'll need it before stepping into your final zone.\n\n- From
-        Patrick"
+      value: "*Make your way to the big boat in the dock \u2014 a VHS tape
+        lies waiting on board, and you'll need it before stepping into your final
+        zone.\n\n- From Patrick"
       objectReference: {fileID: 0}
     - target: {fileID: 8541960315968224901, guid: 471f94be919bb8c4a9b55fab006af519, type: 3}
       propertyPath: PaperText.NormalText
-      value: "Head down to the old pier by the sea \u2014 a VHS tape lies waiting
-        there, and you'll need it before stepping into your final zone.\n\n- From
-        Patrick"
+      value: "Make your way to the big boat in the dock \u2014 a VHS tape
+        lies waiting on board, and you'll need it before stepping into your final
+        zone.\n\n- From Patrick"
       objectReference: {fileID: 0}
     - target: {fileID: 8747774001340122420, guid: 471f94be919bb8c4a9b55fab006af519, type: 3}
       propertyPath: m_Name
@@ -498672,6 +498678,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.11028771, y: -0.24473244, z: -0.2977662}
     m_Extent: {x: 0.15586276, y: 0.43981743, z: 0.34194845}
   m_DirtyAABB: 0
+--- !u!134 &2078988412
+PhysicsMaterial:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 2
+  m_DynamicFriction: 0.6
+  m_StaticFriction: 0.6
+  m_Bounciness: 0
+  m_FrictionCombine: 0
+  m_BounceCombine: 0
 --- !u!1 &2079318425
 GameObject:
   m_ObjectHideFlags: 0
