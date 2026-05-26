@@ -19,15 +19,8 @@ public class DinerPuzzleInteractable : MonoBehaviour
             interactPrompt.SetActive(false);
     }
 
-    void Update()
-    {
-        if (playerInRange && Input.GetKeyDown(KeyCode.E))
-        {
-            Interact();
-        }
-    }
-
-    void Interact()
+    // UHFPS will call this from On Take Event
+    public void Interact()
     {
         Debug.Log("Interacted with: " + gameObject.name);
 
@@ -36,7 +29,8 @@ public class DinerPuzzleInteractable : MonoBehaviour
             audioSource.Play();
 
         // Send signal to puzzle manager
-        DinerPuzzleManager.Instance.RegisterInput(objectID);
+        if (DinerPuzzleManager.Instance != null)
+            DinerPuzzleManager.Instance.RegisterInput(objectID);
     }
 
     private void OnTriggerEnter(Collider other)
