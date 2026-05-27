@@ -468898,6 +468898,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4605262033271063778, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2043923336}
+    - targetCorrespondingSourceObject: {fileID: 4605262033271063778, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2000000060}
+    - targetCorrespondingSourceObject: {fileID: 4605262033271063778, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2000000062}
   m_SourcePrefab: {fileID: 100100000, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
 --- !u!1 &1674544441
 GameObject:
@@ -500976,10 +500982,52 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3f81d64be17442c493fc4b9d45ed6c5, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::RadioTapeActivator
   radio: {fileID: 2043923330}
   vhsTape: {fileID: 1813044643}
+--- !u!82 &2000000061 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7327323438354522885, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+  m_PrefabInstance: {fileID: 1672632387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2000000060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043923328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463818b2825d6b0439a2f9ff3b9ab45f, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  TriggerType: 2
+  DialogueType: 0
+  DialogueContinue: 0
+  Dialogue: {fileID: 11400000, guid: a3f7c12e9b054d81b3e5920f6d48c703, type: 2}
+  DialogueAudio: {fileID: 2000000061}
+  BinderName:
+  RangedDialogue: 0
+  ResetDialogueWhenOut: 0
+  LocalDialogueRange: 0
+--- !u!114 &2000000062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043923328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2523d8e2c1184f4b8b6c54d2be9f703, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::RadioInteract
+  radioAudioSource: {fileID: 2000000061}
+  dinerPuzzleClip: {fileID: 0}
+  dialogueTrigger: {fileID: 2000000060}
+  TriggerOnInteract: 0
 --- !u!1 &2045045985
 GameObject:
   m_ObjectHideFlags: 0
