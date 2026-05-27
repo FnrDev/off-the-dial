@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb5bd7e8a706a41b793e7440b34eea, type: 3}
+  m_Name: Postoffice_Dialogue
+  m_EditorClassIdentifier: Assembly-CSharp::UHFPS.Scriptable.DialogueAsset
+  Dialogues:
+  - DialogueAudio: {fileID: 8300000, guid: 63f10cc2310f14502893fd59f437b9a0, type: 3}
+    SubtitleType: 1
+    SingleSubtitle:
+      Time: 0
+      Narrator: Walter Reed
+      NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+      Text:
+        GlocText: '"I used to hear him pray every morning. Same words, same time.
+          Like clockwork." "Haven''t heard his voice in weeks. But the bells... the
+          bells still ring." '
+        NormalText: 
+    Subtitles:
+    - rid: 3893192064948240478
+    - rid: 3893192064948240480
+    - rid: 3893192064948240482
+  references:
+    version: 2
+    RefIds:
+    - rid: 3893192064948240478
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 0.093742326
+        Narrator: Walter Reed
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: '"I used to hear him pray every morning. Same words, same time."'
+          NormalText: 
+    - rid: 3893192064948240480
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 9.139877
+        Narrator: Walter Reed
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: '"Haven''t heard his voice in weeks. But the bells... the bells
+            still ring."'
+          NormalText: 
+    - rid: 3893192064948240482
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 6.515092
+        Narrator: Walter Reed
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: '"Like clockwork!"'
+          NormalText: 

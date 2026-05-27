@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb5bd7e8a706a41b793e7440b34eea, type: 3}
+  m_Name: DialogueAsset_GasStation
+  m_EditorClassIdentifier:
+  Dialogues:
+  - DialogueAudio: {fileID: 8300000, guid: 499dc671943b84ee3941981c7023f966, type: 3}
+    SubtitleType: 1
+    SingleSubtitle:
+      Time: 0
+      Narrator:
+      NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+      Text:
+        GlocText:
+        NormalText:
+    Subtitles:
+    - rid: 5900000000000000001
+    - rid: 5900000000000000002
+    - rid: 5900000000000000003
+    - rid: 5900000000000000004
+    - rid: 5900000000000000005
+    - rid: 5900000000000000006
+    - rid: 5900000000000000007
+    - rid: 5900000000000000008
+    - rid: 5900000000000000009
+    - rid: 5900000000000000010
+    - rid: 5900000000000000011
+    - rid: 5900000000000000012
+  references:
+    version: 2
+    RefIds:
+    - rid: 5900000000000000001
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 0
+        Narrator:
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "Just keep moving, you know?"
+          NormalText: "Just keep moving, you know?"
+    - rid: 5900000000000000002
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 2
+        Narrator:
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "That's the main thing."
+          NormalText: "That's the main thing."
+    - rid: 5900000000000000003
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 5
+        Narrator:
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "Don't look back."
+          NormalText: "Don't look back."
+    - rid: 5900000000000000004
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 8
+        Narrator:
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "The road, it's always there."
+          NormalText: "The road, it's always there."
+    - rid: 5900000000000000005
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 12
+        Narrator:
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "Yeah, you gotta leave all that stuff behind."
+          NormalText: "Yeah, you gotta leave all that stuff behind."
+    - rid: 5900000000000000006
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 17
+        Narrator:
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "The city, the noise, it just fades."
+          NormalText: "The city, the noise, it just fades."
+    - rid: 5900000000000000007
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 22
+        Narrator:
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "You'll find it, I'm sure of it."
+          NormalText: "You'll find it, I'm sure of it."
+    - rid: 5900000000000000008
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 26
+        Narrator:
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "Before that old radio tower..."
+          NormalText: "Before that old radio tower..."
+    - rid: 5900000000000000009
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 30
+        Narrator:
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "She always loved that diner."
+          NormalText: "She always loved that diner."
+    - rid: 5900000000000000010
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 34
+        Narrator:
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "You won't see it until you're right on top of it,"
+          NormalText: "You won't see it until you're right on top of it,"
+    - rid: 5900000000000000011
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 38
+        Narrator:
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "but trust me, it's there."
+          NormalText: "but trust me, it's there."
+    - rid: 5900000000000000012
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 42
+        Narrator:
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "Just keep walking."
+          NormalText: "Just keep walking."
