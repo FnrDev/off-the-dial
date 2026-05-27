@@ -18,6 +18,10 @@ public class ChurchPuzzle : MonoBehaviour
     [Tooltip("Any GameObject to activate on solve: door, chest, key item, etc.")]
     public GameObject rewardObject;
 
+    [Header("Reward Sound")]
+    public AudioClip rewardSound;
+    public float rewardVolume = 1.8f;
+
     private int[] _playerSequence;
     private int _currentStep = 0;
     private bool _puzzleSolved = false;
@@ -43,38 +47,34 @@ public class ChurchPuzzle : MonoBehaviour
     {
         if (_puzzleSolved) return;
 
-        _playerSequence[_currentStep] = candleIndex;
         SetCandleLit(candleIndex, false);
-        _currentStep++;
 
-        Debug.Log($"[ChurchPuzzle] Step {_currentStep}/{correctSequence.Length} — Candle {candleIndex} blown out.");
+        if (candleIndex != correctSequence[_currentStep])
+        {
+            Debug.Log($"[ChurchPuzzle] Wrong candle! Expected {correctSequence[_currentStep]}, got {candleIndex}. Resetting.");
+            PlayWrongSoundOn(candleIndex);
+            StartCoroutine(ResetAfterDelay());
+            return;
+        }
+
+        _currentStep++;
+        Debug.Log($"[ChurchPuzzle] Step {_currentStep}/{correctSequence.Length} — Candle {candleIndex} correct.");
 
         if (_currentStep >= correctSequence.Length)
-        {
-            StartCoroutine(CheckSolutionDelayed());
-        }
+            StartCoroutine(SolvePuzzle());
     }
 
-    // Small delay so the last candle visually blows out before reset
-    IEnumerator CheckSolutionDelayed()
+    void PlayWrongSoundOn(int candleIndex)
+    {
+        int i = candleIndex - 1;
+        if (i >= 0 && i < allCandles.Length && allCandles[i] != null)
+            allCandles[i].PlayWrongSound();
+    }
+
+    IEnumerator ResetAfterDelay()
     {
         yield return new WaitForSeconds(0.5f);
-        CheckSolution();
-    }
-
-    void CheckSolution()
-    {
-        for (int i = 0; i < correctSequence.Length; i++)
-        {
-            if (_playerSequence[i] != correctSequence[i])
-            {
-                Debug.Log($"[ChurchPuzzle] Wrong sequence! Resetting.");
-                ResetAllCandles();
-                return;
-            }
-        }
-
-        StartCoroutine(SolvePuzzle());
+        ResetAllCandles();
     }
 
     void ResetAllCandles()
@@ -101,6 +101,10 @@ public class ChurchPuzzle : MonoBehaviour
         if (rewardObject != null)
         {
             rewardObject.SetActive(true);
+
+            if (rewardSound != null)
+                AudioSource.PlayClipAtPoint(rewardSound, rewardObject.transform.position, rewardVolume);
+
             Debug.Log($"[ChurchPuzzle] Reward activated: {rewardObject.name}");
         }
         else
