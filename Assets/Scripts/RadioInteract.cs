@@ -33,8 +33,10 @@ public class RadioInteract : MonoBehaviour, IInteractStart
     {
         if (subtitleTriggered) return;
         subtitleTriggered = true;
-
+        Debug.Log("RadioInteract Fire() called!");
         if (dialogueTrigger != null)
             dialogueTrigger.TriggerDialogue();
+        else
+            Debug.Log("dialogueTrigger is NULL!");
     }
 }
