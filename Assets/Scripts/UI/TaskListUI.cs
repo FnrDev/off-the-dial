@@ -45,6 +45,7 @@ public class TaskListUI : MonoBehaviour
         new TaskEntry { Id = "head_church",        Category = "", TaskName = "Head to church",         RequiredCount = 1 },
         new TaskEntry { Id = "head_dukes_dockyard",Category = "", TaskName = "Head to duke's dockyard",RequiredCount = 1 },
         new TaskEntry { Id = "head_gas_station",   Category = "", TaskName = "Head to gas station",    RequiredCount = 1 },
+        new TaskEntry { Id = "head_diner", Category = "", TaskName = "Investigate the diner", RequiredCount = 1 },
         new TaskEntry { Id = "head_tower",         Category = "", TaskName = "Head to tower",          RequiredCount = 1 },
     };
 

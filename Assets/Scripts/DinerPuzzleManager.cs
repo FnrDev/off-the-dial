@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class DinerPuzzleManager : MonoBehaviour
 {
@@ -100,7 +101,7 @@ private string GetObjectName(int id)
 
     private void PuzzleSolved()
     {
-        sequenceUI.text = "OPEN";
+StartCoroutine(HideSequenceUIAfterDelay());
         puzzleSolved = true;
 
         if (freezerReward != null)
@@ -112,4 +113,15 @@ private string GetObjectName(int id)
         if (successAudio != null)
             successAudio.Play();
     }
+
+    private IEnumerator HideSequenceUIAfterDelay()
+{
+    if (sequenceUI == null) yield break;
+
+    sequenceUI.text = "OPEN";
+
+    yield return new WaitForSeconds(2f);
+
+    sequenceUI.gameObject.SetActive(false);
+}
 }
