@@ -458191,6 +458191,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4605262033271063778, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1510609661}
+    - targetCorrespondingSourceObject: {fileID: 4605262033271063778, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1510609668}
+    - targetCorrespondingSourceObject: {fileID: 4605262033271063778, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1510609667}
   m_SourcePrefab: {fileID: 100100000, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
 --- !u!4 &1510609658 stripped
 Transform:
@@ -458227,6 +458233,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RadioTapeActivator
   radio: {fileID: 1510609660}
   vhsTape: {fileID: 2003339693}
+--- !u!82 &1510609662 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7327323438354522885, guid: e3bd993d2b6da904aa14567cd27f8656, type: 3}
+  m_PrefabInstance: {fileID: 1510609657}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1510609667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510609659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cde4d32591e4282982bf6cb1ce4963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OfficeRadioDialogueTrigger
+  radioAudioSource: {fileID: 1510609662}
+  broadcastClip: {fileID: 8300000, guid: 63f10cc2310f14502893fd59f437b9a0, type: 3}
+  dialogueTrigger: {fileID: 1510609668}
+  TriggerOnInteract: 0
+--- !u!114 &1510609668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510609659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463818b2825d6b0439a2f9ff3b9ab45f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UHFPS.Runtime.DialogueTrigger
+  TriggerType: 2
+  DialogueType: 0
+  DialogueContinue: 1
+  Dialogue: {fileID: 11400000, guid: ee8143af3d13b45b8a23841f50af564f, type: 2}
+  DialogueAudio: {fileID: 1510609662}
+  BinderName: 
+  RangedDialogue: 0
+  ResetDialogueWhenOut: 0
+  LocalDialogueRange: 0
 --- !u!1 &1510668600 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5395821742199396433, guid: 812696f925248e248b910be3e77f1a8c, type: 3}
