@@ -106,6 +106,12 @@ namespace UHFPS.Runtime
             isTriggered = dialogueSystem.PlayDialogue(this);
         }
 
+        public void ResetDialogue()
+        {
+            isTriggered = false;
+            IsCompleted = false;
+        }
+
         public StorableCollection OnSave()
         {
             return new StorableCollection()

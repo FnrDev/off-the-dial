@@ -1,5 +1,4 @@
 using UnityEngine;
-using TMPro;
 using UnityEngine.InputSystem;
 
 public class CandleInteract : MonoBehaviour
@@ -16,8 +15,9 @@ public class CandleInteract : MonoBehaviour
     public float interactDistance = 1.5f;
     public KeyCode interactKey = KeyCode.E;
 
-    [Header("UI")]
-    public TextMeshProUGUI promptText;
+    [Header("Audio")]
+    public AudioClip blowSound;
+    public AudioClip wrongSound;
 
     private Transform _player;
     private bool _isLit = true;
@@ -47,11 +47,6 @@ public class CandleInteract : MonoBehaviour
         float dist = Vector3.Distance(transform.position, _player.position);
         _playerInRange = dist <= interactDistance;
 
-        if (promptText != null)
-        {
-            promptText.text = (_playerInRange && _isLit) ? "Press E to Blow Out" : "";
-        }
-
         if (_playerInRange && _isLit && Keyboard.current.eKey.wasPressedThisFrame)
         {
             Debug.Log($"[CandleInteract] Candle_{candleIndex}: E pressed, calling OnCandleBlown.");
@@ -61,6 +56,9 @@ public class CandleInteract : MonoBehaviour
 
     void TryBlow()
     {
+        if (blowSound != null)
+            AudioSource.PlayClipAtPoint(blowSound, transform.position);
+
         if (ChurchPuzzle.Instance != null)
             ChurchPuzzle.Instance.OnCandleBlown(candleIndex);
         else
@@ -69,7 +67,6 @@ public class CandleInteract : MonoBehaviour
 
     public void SetLit(bool lit)
     {
-        // Always force the state regardless of current _isLit value
         _isLit = lit;
 
         if (flameObject != null)
@@ -77,10 +74,12 @@ public class CandleInteract : MonoBehaviour
 
         if (candleLight != null)
             candleLight.enabled = lit;
+    }
 
-        // Clear prompt when extinguished
-        if (!lit && promptText != null)
-            promptText.text = "";
+    public void PlayWrongSound()
+    {
+        if (wrongSound != null)
+            AudioSource.PlayClipAtPoint(wrongSound, transform.position);
     }
 
     public bool IsLit => _isLit;
