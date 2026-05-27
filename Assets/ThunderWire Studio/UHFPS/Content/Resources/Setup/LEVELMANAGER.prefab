@@ -259,7 +259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Super long title
+  m_text: OFF THE DIAL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23a2e4951b27c634f8ab472943900536, type: 2}
   m_sharedMaterial: {fileID: 4776011876496188843, guid: 23a2e4951b27c634f8ab472943900536, type: 2}
@@ -297,6 +297,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -661,6 +662,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -782,6 +784,7 @@ MonoBehaviour:
       GlocText: loading.description.demoscene3
       NormalText: 
     Background: {fileID: 21300000, guid: 8a90b4371d5d5b6458c58d448a0e4d7e, type: 3}
+  RandomBackgrounds: []
   Title: {fileID: 7137861545701340859}
   Description: {fileID: 1680686305024344842}
   Background: {fileID: 2440201664425607479}
@@ -838,12 +841,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TipsList:
-  - GlocText: tips.tip1
-    NormalText: 
-  - GlocText: tips.tip2
-    NormalText: 
-  - GlocText: tips.tip3
-    NormalText: 
+  - GlocText: 
+    NormalText: Use WASD to move. Hold Shift to sprint when you need to escape.
+  - GlocText: 
+    NormalText: Press E to interact with objects, open doors and pick up items.
+  - GlocText: 
+    NormalText: "Toggle your flashlight to see in dark areas \u2014 batteries drain
+      over time."
+  - GlocText: 
+    NormalText: Open your inventory with TAB to combine items, examine them, or set
+      shortcuts.
+  - GlocText: 
+    NormalText: Hold Right Mouse Button to examine an item up close for hidden details.
+  - GlocText: 
+    NormalText: Lean around corners with Q and E to peek without exposing yourself.
+  - GlocText: 
+    NormalText: "Listen carefully \u2014 ghosts make distinct sounds. Avoid them
+      or hide if spotted."
+  - GlocText: 
+    NormalText: Your task list shows which zone to visit next. Follow it to progress
+      the story.
+  - GlocText: 
+    NormalText: Tune the radio to the right frequency to uncover clues and unlock
+      new areas.
+  - GlocText: 
+    NormalText: VHS tapes contain story fragments. Find a VCR to play them back.
+  - GlocText: 
+    NormalText: "Save your progress regularly \u2014 the island is not forgiving."
   TipsGroup: {fileID: 7433410050153826673}
   TipText: {fileID: 3373390543984086613}
   TipTime: 5
@@ -1039,6 +1063,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1334,7 +1359,6 @@ MonoBehaviour:
   m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
-  m_Version: 2
   m_TaaSettings:
     m_Quality: 3
     m_FrameInfluence: 0.1
@@ -1342,6 +1366,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &6534057952624380244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,9 +1433,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  m_text: Tune in to mysterious frequencies. Explore the island. Survive what answers.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47b5d910a9846af4dbb21621995290de, type: 2}
   m_sharedMaterial: {fileID: -4185391628614124083, guid: 47b5d910a9846af4dbb21621995290de, type: 2}
@@ -1448,6 +1471,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1642,8 +1666,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
+  m_text: Use WASD to move. Hold Shift to sprint when you need to escape.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47b5d910a9846af4dbb21621995290de, type: 2}
   m_sharedMaterial: {fileID: -4185391628614124083, guid: 47b5d910a9846af4dbb21621995290de, type: 2}
@@ -1681,6 +1704,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
