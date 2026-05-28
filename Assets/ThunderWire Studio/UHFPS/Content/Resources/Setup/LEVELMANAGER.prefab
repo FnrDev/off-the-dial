@@ -784,7 +784,11 @@ MonoBehaviour:
       GlocText: loading.description.demoscene3
       NormalText: 
     Background: {fileID: 21300000, guid: 8a90b4371d5d5b6458c58d448a0e4d7e, type: 3}
-  RandomBackgrounds: []
+  RandomBackgrounds:
+  - {fileID: 21300000, guid: 018e29cdc921daa439a4164c85a726e1, type: 3}
+  - {fileID: 21300000, guid: fa183d09201c0424da613918d9406b14, type: 3}
+  - {fileID: 21300000, guid: b7704861b268cf145b1b5ee8669786e7, type: 3}
+  - {fileID: 21300000, guid: 0d4c3066d149d784a850235b89159bcb, type: 3}
   Title: {fileID: 7137861545701340859}
   Description: {fileID: 1680686305024344842}
   Background: {fileID: 2440201664425607479}

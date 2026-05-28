@@ -364,28 +364,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7902366314218218365}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1714860476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1714860473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22c506f8e2c894f4aa4c8c60958e9231, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  OptionObservers:
-  - rid: 7714860476000000001
-  references:
-    version: 2
-    RefIds:
-    - rid: 7714860476000000001
-      type: {class: OptionAudioVolume, ns: UHFPS.Runtime, asm: Assembly-CSharp}
-      data:
-        ObserveOptionName: volume_music
-        AudioSource: {fileID: 1714860475}
 --- !u!82 &1714860475
 AudioSource:
   m_ObjectHideFlags: 0
@@ -483,6 +461,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1714860476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714860473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c506f8e2c894f4aa4c8c60958e9231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OptionObservers:
+  - rid: 7714860476000000001
+  references:
+    version: 2
+    RefIds:
+    - rid: 7714860476000000001
+      type: {class: OptionAudioVolume, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        ObserveOptionName: volume_music
+        AudioSource: {fileID: 1714860475}
 --- !u!1001 &7902366314218218364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -491,6 +491,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1100000002, guid: 68e978a15bedca6459a73e501a635e73, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100000002, guid: 68e978a15bedca6459a73e501a635e73, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100000002, guid: 68e978a15bedca6459a73e501a635e73, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100000002, guid: 68e978a15bedca6459a73e501a635e73, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 283097990584587668, guid: 68e978a15bedca6459a73e501a635e73, type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
@@ -506,7 +522,7 @@ PrefabInstance:
     - target: {fileID: 1405417008907014350, guid: 68e978a15bedca6459a73e501a635e73, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9c6673695808f7f498f07e39d52f8e00, type: 3}
+      objectReference: {fileID: 21300000, guid: 8e143534c7e0b4ba0b71417637d9169a, type: 3}
     - target: {fileID: 1405417008907014350, guid: 68e978a15bedca6459a73e501a635e73, type: 3}
       propertyPath: m_PreserveAspect
       value: 1
