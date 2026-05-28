@@ -13,28 +13,28 @@ public class CandleInteract : MonoBehaviour
 
     [Header("Interaction")]
     public float interactDistance = 1.5f;
-    public KeyCode interactKey = KeyCode.E;
 
     [Header("Audio")]
     public AudioClip blowSound;
     public AudioClip wrongSound;
 
     private Transform _player;
+    private GameObject _candlePrompt;
     private bool _isLit = true;
-    private bool _playerInRange = false;
+    private bool _wasInRange = false;
 
     void Start()
     {
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-
         if (playerObj != null)
-        {
             _player = playerObj.transform;
-            Debug.Log($"[CandleInteract] Candle_{candleIndex}: Player found successfully.");
-        }
-        else
+
+        // GameObject.Find skips inactive objects, so find via active parent
+        var hud = GameObject.Find("HUDPanel");
+        if (hud != null)
         {
-            Debug.LogError($"[CandleInteract] Candle_{candleIndex}: No GameObject tagged 'Player' found!");
+            var t = hud.transform.Find("CandlePrompt");
+            if (t != null) _candlePrompt = t.gameObject;
         }
 
         SetLit(true);
@@ -45,13 +45,29 @@ public class CandleInteract : MonoBehaviour
         if (_player == null) return;
 
         float dist = Vector3.Distance(transform.position, _player.position);
-        _playerInRange = dist <= interactDistance;
+        bool inRange = dist <= interactDistance && _isLit;
 
-        if (_playerInRange && _isLit && Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            Debug.Log($"[CandleInteract] Candle_{candleIndex}: E pressed, calling OnCandleBlown.");
+        if (inRange && !_wasInRange)
+            ShowPrompt(true);
+        else if (!inRange && _wasInRange)
+            ShowPrompt(false);
+
+        _wasInRange = inRange;
+
+        if (inRange && Keyboard.current.eKey.wasPressedThisFrame)
             TryBlow();
-        }
+    }
+
+    void OnDisable()
+    {
+        if (_wasInRange)
+            ShowPrompt(false);
+    }
+
+    void ShowPrompt(bool show)
+    {
+        if (_candlePrompt != null)
+            _candlePrompt.SetActive(show);
     }
 
     void TryBlow()
@@ -68,6 +84,9 @@ public class CandleInteract : MonoBehaviour
     public void SetLit(bool lit)
     {
         _isLit = lit;
+
+        if (!lit && _wasInRange)
+            ShowPrompt(false);
 
         if (flameObject != null)
             flameObject.SetActive(lit);

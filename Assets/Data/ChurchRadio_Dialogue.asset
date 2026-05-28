@@ -12,7 +12,87 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cb5bd7e8a706a41b793e7440b34eea, type: 3}
   m_Name: ChurchRadio_Dialogue
   m_EditorClassIdentifier: Assembly-CSharp::UHFPS.Scriptable.DialogueAsset
-  Dialogues: []
+  Dialogues:
+  - DialogueAudio: {fileID: 8300000, guid: c396a7526f1664021858cdde3f43b9e8, type: 3}
+    SubtitleType: 1
+    SingleSubtitle:
+      Time: 0
+      Narrator:
+      NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+      Text:
+        GlocText:
+        NormalText:
+    Subtitles:
+    - rid: 7700000000000000001
+    - rid: 7700000000000000002
+    - rid: 7700000000000000003
+    - rid: 7700000000000000004
+    - rid: 7700000000000000005
+    - rid: 7700000000000000006
+    - rid: 7700000000000000007
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 7700000000000000001
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 0
+        Narrator: Radio
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: If you wish to leave... follow what happened
+          NormalText: If you wish to leave... follow what happened
+    - rid: 7700000000000000002
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 3
+        Narrator: Radio
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: This church used to be holy. We were five priests protecting this town.
+          NormalText: This church used to be holy. We were five priests protecting this town.
+    - rid: 7700000000000000003
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 11
+        Narrator: Radio
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: But the curse entered. In two nights, it reached the entrance, staining the doors with blood.
+          NormalText: But the curse entered. In two nights, it reached the entrance, staining the doors with blood.
+    - rid: 7700000000000000004
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 17
+        Narrator: Radio
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: My brothers died. Now, I am the only one left in the dark.
+          NormalText: My brothers died. Now, I am the only one left in the dark.
+    - rid: 7700000000000000005
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 25
+        Narrator: Radio
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: The shadow took over at eight. I could hear the wooden pews cracking.
+          NormalText: The shadow took over at eight. I could hear the wooden pews cracking.
+    - rid: 7700000000000000006
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 30
+        Narrator: Radio
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: Look at the corners near the altar... ten eyes are watching me
+          NormalText: Look at the corners near the altar... ten eyes are watching me
+    - rid: 7700000000000000007
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 36
+        Narrator: Radio
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: "Extinguish them... one by one... or they will... extinguish you."
+          NormalText: "Extinguish them... one by one... or they will... extinguish you."
