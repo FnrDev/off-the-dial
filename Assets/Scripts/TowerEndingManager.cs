@@ -1,9 +1,13 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UHFPS.Input;
 using UHFPS.Runtime;
 
 public class TowerEndingManager : MonoBehaviour
 {
+    private const string ContinueHint = "\n\n<size=70%><i>Press [E] to return to the main menu.</i></size>";
+
     [Header("Rain")]
     public GameObject rainSplash;
     public float rainFadeTime = 2f;
@@ -13,6 +17,11 @@ public class TowerEndingManager : MonoBehaviour
     public GhostPatrol ghost;
     public Light directionalLight;
     public AudioSource ambientHorror;
+
+    [Header("Ending Screen")]
+    [TextArea(6, 20)]
+    public string endingText =
+        "The dial finally tunes.\n\nFive voices, five fragments, one broadcast going out from the top of the tower. Whatever was holding Oxley in the static loosens its grip — the radio finds a clear channel, and the island starts to breathe again.\n\nYou did what no one else could: you listened.";
 
     private bool _rainStarted = false;
 
@@ -69,9 +78,27 @@ public class TowerEndingManager : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        // Show ending UI - load main menu or
-        // show credits screen
-        Debug.Log("ENDING COMPLETE");
+        yield return ShowEndingScreen();
+    }
+
+    private IEnumerator ShowEndingScreen()
+    {
+        var gameManager = GameManager.Instance;
+        var presence = PlayerPresenceManager.Instance;
+        if (gameManager == null) yield break;
+
+        if (presence != null) presence.FreezePlayer(true);
+
+        gameManager.ShowPaperInfo(true, false, endingText + ContinueHint);
+
+        yield return null;
+        while (!InputManager.ReadButtonOnce(this, Controls.USE))
+            yield return null;
+
+        gameManager.ShowPaperInfo(false, false);
+        AudioListener.volume = 1f;
+
+        SceneManager.LoadScene(SaveGameManager.MM);
     }
 
     private void StopRain()

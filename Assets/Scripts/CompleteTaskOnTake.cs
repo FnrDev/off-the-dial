@@ -1,30 +1,12 @@
 using UnityEngine;
 using UHFPS.Runtime;
 
-[RequireComponent(typeof(InteractableItem))]
-public class CompleteTaskOnTake : MonoBehaviour
+public class CompleteTaskOnTake : MonoBehaviour, IInteractStart
 {
-    [Tooltip("Task id passed to TaskListUI.Complete when this item is taken.")]
+    [Tooltip("Task id passed to TaskListUI.Complete when this item is interacted with.")]
     public string taskId;
 
-    private InteractableItem _item;
-
-    private void Awake()
-    {
-        _item = GetComponent<InteractableItem>();
-    }
-
-    private void OnEnable()
-    {
-        if (_item != null) _item.OnTakeEvent.AddListener(OnTaken);
-    }
-
-    private void OnDisable()
-    {
-        if (_item != null) _item.OnTakeEvent.RemoveListener(OnTaken);
-    }
-
-    private void OnTaken()
+    public void InteractStart()
     {
         if (string.IsNullOrEmpty(taskId)) return;
         TaskListUI.Complete(taskId);
