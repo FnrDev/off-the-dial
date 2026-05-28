@@ -7,6 +7,7 @@ public class TowerEndingManager : MonoBehaviour
     [Header("Rain")]
     public GameObject rainSplash;
     public float rainFadeTime = 2f;
+    public AudioSource rainAmbience;
 
     [Header("Ending")]
     public GhostPatrol ghost;
@@ -29,6 +30,9 @@ public class TowerEndingManager : MonoBehaviour
 
         if (rainSplash != null)
             rainSplash.SetActive(true);
+
+        if (rainAmbience != null)
+            rainAmbience.Play();
 
         var rainModule = GameManager.Module<RainingModule>();
         if (rainModule != null)
@@ -75,6 +79,9 @@ public class TowerEndingManager : MonoBehaviour
         var rainModule = GameManager.Module<RainingModule>();
         if (rainModule != null)
             rainModule.FadeRaindrop(false, rainFadeTime);
+
+        if (rainAmbience != null)
+            rainAmbience.Stop();
 
         if (rainSplash != null)
             rainSplash.SetActive(false);
