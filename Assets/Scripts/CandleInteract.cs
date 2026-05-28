@@ -46,16 +46,13 @@ public class CandleInteract : MonoBehaviour, IInteractStart, IInteractTitle
 
     void TryBlow()
     {
+        if (blowSound != null)
+            AudioSource.PlayClipAtPoint(blowSound, transform.position);
+
         if (ChurchPuzzle.Instance != null)
             ChurchPuzzle.Instance.OnCandleBlown(candleIndex);
         else
             Debug.LogError("[CandleInteract] ChurchPuzzle.Instance is NULL!");
-    }
-
-    public void PlayBlowSound()
-    {
-        if (blowSound != null)
-            AudioSource.PlayClipAtPoint(blowSound, transform.position);
     }
 
     public void SetLit(bool lit)
