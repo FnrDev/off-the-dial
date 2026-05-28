@@ -47,6 +47,8 @@ public class ChurchPuzzle : MonoBehaviour
     {
         if (_puzzleSolved) return;
 
+        SetCandleLit(candleIndex, false);
+
         if (candleIndex != correctSequence[_currentStep])
         {
             Debug.Log($"[ChurchPuzzle] Wrong candle! Expected {correctSequence[_currentStep]}, got {candleIndex}. Resetting.");
@@ -55,8 +57,6 @@ public class ChurchPuzzle : MonoBehaviour
             return;
         }
 
-        PlayBlowSoundOn(candleIndex);
-        SetCandleLit(candleIndex, false);
         _currentStep++;
         Debug.Log($"[ChurchPuzzle] Step {_currentStep}/{correctSequence.Length} — Candle {candleIndex} correct.");
 
@@ -69,13 +69,6 @@ public class ChurchPuzzle : MonoBehaviour
         int i = candleIndex - 1;
         if (i >= 0 && i < allCandles.Length && allCandles[i] != null)
             allCandles[i].PlayWrongSound();
-    }
-
-    void PlayBlowSoundOn(int candleIndex)
-    {
-        int i = candleIndex - 1;
-        if (i >= 0 && i < allCandles.Length && allCandles[i] != null)
-            allCandles[i].PlayBlowSound();
     }
 
     IEnumerator ResetAfterDelay()
