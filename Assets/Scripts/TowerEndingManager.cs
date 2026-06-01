@@ -98,6 +98,13 @@ public class TowerEndingManager : MonoBehaviour
         gameManager.ShowPaperInfo(false, false);
         AudioListener.volume = 1f;
 
+        // Gameplay locks/hides the cursor and may leave the game time-scaled.
+        // The MainMenu scene never resets these (it relies on the cursor being
+        // free on first boot), so without this the menu buttons aren't clickable.
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 1f;
+
         SceneManager.LoadScene(SaveGameManager.MM);
     }
 
