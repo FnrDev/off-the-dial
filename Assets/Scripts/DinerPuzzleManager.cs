@@ -110,6 +110,21 @@ StartCoroutine(HideSequenceUIAfterDelay());
         if (freezerDoor != null)
             freezerDoor.UnlockDoor();
 
+        // Once solved, stop the freezer itself from being interactable so the
+        // player picks up the reward (VHS tape) instead of re-triggering the
+        // "objects.freezer" prompt that sits in front of it. Moving it to the
+        // Ignore Raycast layer takes it off the interaction raycast (cull mask
+        // is Default + Interact), letting the ray reach the tape, while the
+        // freezer still physically blocks the player.
+        if (freezerDoor != null && freezerDoor.transform.parent != null)
+        {
+            GameObject freezerObj = freezerDoor.transform.parent.gameObject;
+            freezerObj.layer = LayerMask.NameToLayer("Ignore Raycast");
+
+            if (freezerObj.TryGetComponent(out DinerPuzzleInteractable freezerInteract))
+                freezerInteract.enabled = false;
+        }
+
         if (successAudio != null)
             successAudio.Play();
     }
