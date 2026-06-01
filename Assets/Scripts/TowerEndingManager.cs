@@ -97,7 +97,7 @@ public class TowerEndingManager : MonoBehaviour
 
         gameManager.ShowPaperInfo(false, false);
         AudioListener.volume = 1f;
-
+        if (presence != null) presence.FreezePlayer(false);
         SceneManager.LoadScene(SaveGameManager.MM);
     }
 
